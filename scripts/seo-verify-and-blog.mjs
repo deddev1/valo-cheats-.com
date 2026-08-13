@@ -16,9 +16,9 @@ const bad = [
 	'Activision',
 	'soft aim, and .',
 	'ESP, Soft Aim,',
-	'best-tarkov-cheats',
-	'tarkov-esp-hack',
-	'tarkov-aimbot-hack',
+	'best-valorant-cheats',
+	'valorant-esp-hack',
+	'valorant-aimbot-hack',
 ];
 console.log('--- pages-en leftovers ---');
 for (const b of bad) {
@@ -37,10 +37,10 @@ for (const b of [
 	'vehicles before',
 	'Controllers',
 	'Battle Pass',
-	'RBattlEye',
+	'RVanguard',
 	'soft aim, and .',
-	'best-tarkov-cheats',
-	'tarkov-esp-hack',
+	'best-valorant-cheats',
+	'valorant-esp-hack',
 ]) {
 	const n = en.split(b).length - 1;
 	if (n) console.log(`${b}: ${n}`);
@@ -50,27 +50,27 @@ const blog = readFileSync('src/data/blog/posts.generated.ts', 'utf8');
 const reps = [
 	['V-Bucks', 'roubles'],
 	['Item Shop', 'Flea Market'],
-	['Battle Pass', 'wipe progression'],
-	['FNCS', 'Tarkov tournament'],
+	['Battle Pass', 'episode progression'],
+	['FNCS', 'Valorant tournament'],
 	['Hammer AR', 'M4A1'],
 	['mythics', 'meta guns'],
 	['island codes', 'offline practice maps'],
 	['Creative 1v1s', 'aim training'],
 	['creative 1v1s', 'aim training'],
-	['Epic health', 'Battlestate status'],
-	['Epic terms', 'Battlestate Games terms'],
-	["Epic's BattlEye", 'BattlEye'],
-	['Epic patch', 'Tarkov patch'],
+	['Epic health', 'Riot Games status'],
+	['Epic terms', 'Riot Games terms'],
+	["Epic's Vanguard", 'Vanguard'],
+	['Epic patch', 'Valorant patch'],
 	['EliteFN', 'a Fortnite cheat shop'],
 	['GhostWare', 'a slim cheat vendor'],
 	['CheatVault', 'another cheat shop'],
-	['/tarkov-aimbot-hack/', '/tarkov-aimbot/'],
-	['/tarkov-esp-hack/', '/tarkov-esp/'],
-	['/best-tarkov-cheats/', '/tarkov-cheats/'],
-	['best Tarkov cheats', 'Tarkov cheats'],
+	['/valorant-aimbot-hack/', '/valorant-aimbot/'],
+	['/valorant-esp-hack/', '/valorant-esp/'],
+	['/best-valorant-cheats/', '/valorant-cheats/'],
+	['best Valorant cheats', 'Valorant cheats'],
 	['hot drops', 'hot spawns'],
-	['ranked grinders', 'raid grinders'],
-	['before Ranked', 'before a raid'],
+	['ranked grinders', 'match grinders'],
+	['before Ranked', 'before a match'],
 ];
 let s = blog;
 let n = 0;

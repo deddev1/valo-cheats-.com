@@ -76,82 +76,82 @@ const SITEMAP_INDEX_ENTRIES = 1 + I18N_LOCALES + 1; // EN + locales + images
 
 /** Built HTML that intentionally 301s — allowed to be absent from sitemaps */
 const REDIRECT_ONLY_PATHS = new Set([
-	'/best-tarkov-cheats/',
-	'/tarkov-aimbot-hack/',
-	'/tarkov-esp-hack/',
-	'/tarkov-cheats-2026/',
-	'/undetected-tarkov-cheats/',
-	'/tarkov-mod-menu/',
-	'/tarkov-unlock-all/',
-	'/tarkov-soft-aim/',
-	'/tarkov-wallhack/',
-	'/tarkov-cheat-download/',
-	'/battleye-bypass/',
+	'/best-valorant-cheats/',
+	'/valorant-aimbot-hack/',
+	'/valorant-esp-hack/',
+	'/valorant-cheats-2026/',
+	'/undetected-valorant-cheats/',
+	'/valorant-mod-menu/',
+	'/valorant-unlock-all/',
+	'/valorant-soft-aim/',
+	'/valorant-wallhack/',
+	'/valorant-cheat-download/',
+	'/vanguard-bypass/',
 ]);
 
 const ENGLISH_PATHS = [
 	'/',
-	'/tarkov-esp/',
-	'/tarkov-aimbot/',
+	'/valorant-esp/',
+	'/valorant-aimbot/',
 	'/features/',
 	'/pricing/',
 	'/setup/',
 	'/updates/',
 	'/faq/',
 	'/support/',
-	'/undetected-tarkov-cheats/',
-	'/tarkov-wallhack/',
-	'/tarkov-radar-hack/',
-	'/battleye-bypass/',
-	'/tarkov-cheats-2026/',
-	'/tarkov-cheats/',
-	'/tarkov-cheat-download/',
-	'/tarkov-mod-menu/',
-	'/tarkov-soft-aim/',
-	'/tarkov-unlock-all/',
+	'/undetected-valorant-cheats/',
+	'/valorant-wallhack/',
+	'/valorant-radar-hack/',
+	'/vanguard-bypass/',
+	'/valorant-cheats-2026/',
+	'/valorant-cheats/',
+	'/valorant-cheat-download/',
+	'/valorant-mod-menu/',
+	'/valorant-soft-aim/',
+	'/valorant-unlock-all/',
 	'/privacy-policy/',
 	'/refund-policy/',
 	'/terms/',
 	'/blog/',
-	'/blog/tarkov-scav-run-aggressive-strategies/',
-	'/blog/tarkov-loot-routes-guide/',
-	'/blog/tarkov-weapon-tier-list/',
-	'/blog/tarkov-skin-leaks-guide/',
-	'/blog/tarkov-tournament-meta-guide/',
-	'/blog/tarkov-pro-settings-guide/',
-	'/blog/tarkov-warmup-maps-ranked/',
-	'/blog/tarkov-patch-notes-guide/',
-	'/blog/tarkov-cheats-complete-guide-2026/',
-	'/blog/escape-from-tarkov-cheats-buyers-guide/',
-	'/blog/tarkov-cheats-2026-whats-new/',
-	'/blog/tarkov-aimbot-settings-guide/',
-	'/blog/tarkov-esp-wallhack-explained/',
-	'/blog/undetected-tarkov-cheats-battleye/',
-	'/blog/tarkov-cheats-vs-cheatvault-comparison/',
-	'/blog/elitefn-vs-tarkov-cheats-two-week-test/',
-	'/blog/tarkov-cheats-vs-ghostware-features-pricing/',
+	'/blog/valorant-deathmatch-aggressive-strategies/',
+	'/blog/valorant-loot-routes-guide/',
+	'/blog/valorant-weapon-tier-list/',
+	'/blog/valorant-skin-leaks-guide/',
+	'/blog/valorant-tournament-meta-guide/',
+	'/blog/valorant-pro-settings-guide/',
+	'/blog/valorant-warmup-maps-ranked/',
+	'/blog/valorant-patch-notes-guide/',
+	'/blog/valorant-cheats-complete-guide-2026/',
+	'/blog/escape-from-valorant-cheats-buyers-guide/',
+	'/blog/valorant-cheats-2026-whats-new/',
+	'/blog/valorant-aimbot-settings-guide/',
+	'/blog/valorant-esp-wallhack-explained/',
+	'/blog/undetected-valorant-cheats-vanguard/',
+	'/blog/valorant-cheats-vs-cheatvault-comparison/',
+	'/blog/elitefn-vs-valorant-cheats-two-week-test/',
+	'/blog/valorant-cheats-vs-ghostware-features-pricing/',
 	'/reviews/',
-	'/reviews/tarkov-soft-aim-review-xkrypt0/',
-	'/reviews/tarkov-esp-scav-run-review-buildsr4k/',
-	'/reviews/tarkov-cloud-dma-review-dma-wizard/',
-	'/reviews/tarkov-soft-aim-review-ctrl-player99/',
-	'/reviews/tarkov-cheat-setup-review-stormchaser07/',
-	'/reviews/tarkov-loot-esp-review-lootgoblinx/',
-	'/reviews/tarkov-soft-aim-raid-review-rankedgrind42/',
-	'/reviews/tarkov-radar-hack-review-vanlifeeft/',
-	'/reviews/tarkov-battleye-update-review-patchdaymike/',
-	'/reviews/tarkov-sniper-soft-aim-review-snipezonly/',
-	'/faq/what-are-tarkov-cheats/',
-	'/faq/are-tarkov-cheats-undetected-in-2026/',
-	'/faq/pmc-raids-and-scav-runs/',
+	'/reviews/valorant-soft-aim-review-xkrypt0/',
+	'/reviews/valorant-esp-deathmatch-review-buildsr4k/',
+	'/reviews/valorant-cloud-dma-review-dma-wizard/',
+	'/reviews/valorant-soft-aim-review-ctrl-player99/',
+	'/reviews/valorant-cheat-setup-review-stormchaser07/',
+	'/reviews/valorant-loot-esp-review-lootgoblinx/',
+	'/reviews/valorant-soft-aim-match-review-rankedgrind42/',
+	'/reviews/valorant-radar-hack-review-vanlifeeft/',
+	'/reviews/valorant-vanguard-update-review-patchdaymike/',
+	'/reviews/valorant-sniper-soft-aim-review-snipezonly/',
+	'/faq/what-are-valorant-cheats/',
+	'/faq/are-valorant-cheats-undetected-in-2026/',
+	'/faq/pmc-matches-and-deathmatchs/',
 	'/faq/esp-wallhack-radar-or-aimbot/',
 	'/faq/how-are-licenses-delivered/',
 	'/faq/where-to-check-updates/',
 	'/faq/how-to-contact-support/',
-	'/faq/what-is-a-tarkov-wallhack/',
-	'/faq/does-tarkov-cheats-include-radar-hack/',
-	'/faq/battleye-anti-cheat-and-tarkov-cheats/',
-	'/faq/buy-undetected-tarkov-cheats-windows-pc/',
+	'/faq/what-is-a-valorant-wallhack/',
+	'/faq/does-valorant-cheats-include-radar-hack/',
+	'/faq/vanguard-anti-cheat-and-valorant-cheats/',
+	'/faq/buy-undetected-valorant-cheats-windows-pc/',
 ];
 
 const LOCALE_CODES = [
@@ -161,11 +161,11 @@ const LOCALE_CODES = [
 
 const I18N_LOCALE_CODES = LOCALE_CODES.filter((code) => code !== 'en');
 
-function extractLocs(xml) {
+function siteLocs(xml) {
 	return [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
 }
 
-function extractHreflangCount(xml, url) {
+function siteHreflangCount(xml, url) {
 	const block = xml.split('<loc>').find((part) => part.startsWith(url.replace(/&/g, '&amp;')));
 	if (!block) return 0;
 	return (block.match(/hreflang="/g) ?? []).length;
@@ -214,10 +214,10 @@ async function main() {
 	const robots = await readFile(path.join(ROOT, 'public', 'robots.txt'), 'utf8');
 	const redirects = await readFile(path.join(ROOT, 'public', '_redirects'), 'utf8');
 
-	const indexLocs = extractLocs(sitemapIndex);
-	const enLocs = extractLocs(sitemapEn);
-	const i18nLocs = extractLocs(sitemapI18n);
-	const imageLocs = extractLocs(sitemapImages);
+	const indexLocs = siteLocs(sitemapIndex);
+	const enLocs = siteLocs(sitemapEn);
+	const i18nLocs = siteLocs(sitemapI18n);
+	const imageLocs = siteLocs(sitemapImages);
 
 	// sitemap.xml must be a sitemap index (not a urlset)
 	if (!sitemapIndex.includes('<sitemapindex')) {
@@ -245,7 +245,7 @@ async function main() {
 	for (const locale of I18N_LOCALE_CODES) {
 		const file = path.join(DIST, `sitemap-${locale}.xml`);
 		const xml = await readFile(file, 'utf8');
-		const locs = extractLocs(xml);
+		const locs = siteLocs(xml);
 		localeSitemapLocs[locale] = locs;
 		localeUrlTotal += locs.length;
 
@@ -390,7 +390,7 @@ async function main() {
 	if (errors === 0) ok('All sitemap URLs use HTTPS apex with trailing slashes');
 
 	// hreflang on homepage
-	const homeHreflang = extractHreflangCount(sitemapEn, `${SITE}/`);
+	const homeHreflang = siteHreflangCount(sitemapEn, `${SITE}/`);
 	if (homeHreflang !== HREFLANG_PER_URL) {
 		fail(`Homepage hreflang links: expected ${HREFLANG_PER_URL}, got ${homeHreflang}`);
 		bump();

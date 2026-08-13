@@ -5,28 +5,28 @@
  */
 export const brand = {
 	/** Public brand name (nav, footer, H1 hero, schema Organization) */
-	name: 'Tarkov Cheats',
+	name: 'Valorant Cheats',
 	/** Short product label if needed */
-	shortName: 'Tarkov',
+	shortName: 'Valorant',
 	/** Canonical origin — no trailing slash */
-	url: 'https://tarkovcheats.org',
+	url: 'https://valocheats.com',
 	locale: 'en',
 	market: 'Worldwide',
-	supportEmail: 'support@tarkovcheats.org',
-	checkoutUrl: 'https://zadeyo.com/go/QRH?to=%2Fproducts%2Fescape-from-tarkov',
+	supportEmail: 'support@valocheats.com',
+	checkoutUrl: 'https://zadeyo.com/go/QRH?to=%2Fproducts%2Fvalorant',
 
 	/** Game this template instance targets */
-	game: 'Escape from Tarkov',
+	game: 'Valorant',
 	/** Anti-cheat name used in Status / FAQ copy */
-	antiCheat: 'BattlEye',
+	antiCheat: 'Vanguard',
 
-	logo: '/images/tarkov-cheats-logo.webp',
-	logoRaster: '/images/tarkov-cheats-logo.png',
+	logo: '/images/valorant-cheats-logo.webp',
+	logoRaster: '/images/valorant-cheats-logo.png',
 	logoRasterWidth: 512,
 	logoRasterHeight: 512,
-	logoAlt: 'Tarkov Cheats logo',
-	defaultOgImage: '/images/tarkov-cheats-hero-1024w.webp',
-	heroImage: '/images/tarkov-cheats-hero-1024w.webp',
+	logoAlt: 'Valorant Cheats logo',
+	defaultOgImage: '/images/valorant-cheats-hero-1024w.webp',
+	heroImage: '/images/valorant-cheats-hero-1024w.webp',
 
 	plans: [
 		{ id: 'monthly', label: 'Monthly', price: 35, duration: 'P30D' },
@@ -40,12 +40,12 @@ export const brand = {
 	 * Edit in Brand Studio → Colors (tones are fully customizable).
 	 */
 	theme: {
-		accent: '#5311ee',
-		bg: '#0a0811',
-		soft: '#c3aef4',
-		deep: '#4907df',
-		hover: '#a07bf4',
-		panel: '#0a080c',
+		accent: '#ff4655',
+		bg: '#0f1923',
+		soft: '#ece8e1',
+		deep: '#bd3944',
+		hover: '#ff8b94',
+		panel: '#1a242d',
 	},
 
 	/**
@@ -53,16 +53,16 @@ export const brand = {
 	 * Keep 5–8 terms.
 	 */
 	keywords: {
-		primary: 'tarkov cheats',
+		primary: 'valorant cheats',
 		list: [
-			'tarkov cheats',
-			'escape from tarkov cheats',
-			'tarkov esp',
-			'tarkov aimbot',
-			'tarkov wallhack',
-			'tarkov hacks',
-			'undetected tarkov cheats',
-			'best tarkov cheats',
+			'valorant cheats',
+			'valorant hacks',
+			'valorant esp',
+			'valorant aimbot',
+			'valorant wallhack',
+			'valorant radar hack',
+			'undetected valorant cheats',
+			'best valorant cheats',
 		] as const,
 	},
 
@@ -72,38 +72,38 @@ export const brand = {
 	 */
 	seo: {
 		/** Titles ≤60 chars; descriptions ~140–160 (Google SERP display). */
-		/** Home = brand hub. Money URL /tarkov-cheats/ owns the head term. */
-		homeTitle: 'Tarkov Cheats | Official Windows PC Site',
+		/** Home = brand hub. Money URL /valorant-cheats/ owns the head term. */
+		homeTitle: 'Valorant Cheats | Official Windows PC Site',
 		homeDescription:
-			'Official Tarkov Cheats site for Windows PC. Compare features, store plans, and live status — then buy ESP, soft aim, and radar in one license.',
+			'Official Valorant Cheats site for Windows PC. Compare features, store plans, and live status — then buy ESP, soft aim, and radar in one license.',
 		featuresTitle: '{game} Features | {brand}',
 		featuresDescription:
-			'Everything in one {game} license for Windows PC — ESP, soft aim, radar, loot tools, and patch updates after {antiCheat}. See what is included.',
+			'Everything in one {game} license for Windows PC — ESP, soft aim, radar, spike tools, and patch updates after {antiCheat}. See what is included.',
 		storeTitle: '{game} Store | {brand}',
 		storeDescription:
 			'Monthly and lifetime {game} plans for Windows PC. Same ESP, aimbot, and radar features on both. Instant delivery after payment checkout.',
 		statusTitle: '{game} Status | {brand}',
 		statusDescription:
-			'Live undetected status for {brand} after {game} or {antiCheat} patches. Check here before you queue a raid on Windows PC today.',
-		/** Money page meta — primary target for "tarkov cheats". */
-		previewTitle: 'Tarkov Cheats | Undetected ESP & Aimbot',
+			'Live undetected status for {brand} after {game} or {antiCheat} patches. Check here before you queue on Windows PC today.',
+		/** Money page meta — primary target for "valorant cheats". */
+		previewTitle: 'Valorant Cheats | Undetected ESP & Aimbot',
 		previewDescription:
-			'Buy undetected tarkov cheats for Escape from Tarkov on Windows PC. ESP, soft aim, radar, and BattlEye patch updates in one license with instant delivery.',
+			'Buy undetected valorant cheats for Valorant on Windows PC. ESP, soft aim, radar, and Vanguard patch updates in one license with instant delivery.',
 		setupTitle: '{game} Setup | {brand}',
 		setupDescription:
-			'Install and launch {brand} on Windows PC after checkout. Short setup steps so you can raid faster. Follow each step in order before your first match.',
+			'Install and launch {brand} on Windows PC after checkout. Short setup steps so you can queue faster. Follow each step in order before your first match.',
 		supportTitle: '{game} Support | {brand}',
 		supportDescription:
 			'Get help with {brand} on Windows PC. Email {email} with your order ID for setup, delivery, or billing help after you buy.',
 		faqTitle: '{game} FAQ | {brand}',
 		faqDescription:
-			'Short answers about {brand} for Escape from Tarkov — delivery, setup, {antiCheat} updates, refunds, and Windows PC system notes before you buy.',
+			'Short answers about {brand} for Valorant — delivery, setup, {antiCheat} updates, refunds, and Windows PC system notes before you buy.',
 		reviewsTitle: '{brand} Reviews | Buyer Feedback',
 		reviewsDescription:
-			'Buyer reviews for {brand} — ESP, soft aim, radar, and patch updates for Escape from Tarkov on Windows PC. Real feedback from license holders.',
+			'Buyer reviews for {brand} — ESP, soft aim, radar, and patch updates for Valorant on Windows PC. Real feedback from license holders.',
 		blogTitle: '{game} Intel | {brand}',
 		blogDescription:
-			'Guides and notes for {game} — raid tips, ESP, aimbot, loot routes, and {antiCheat} update coverage for Windows PC players who raid.',
+			'Guides and notes for {game} — ranked tips, ESP, aimbot, map control, and {antiCheat} update coverage for Windows PC players who queue.',
 	},
 
 	/** On-page marketing copy (tokens allowed) */
@@ -111,15 +111,15 @@ export const brand = {
 		tagline: 'Undetected {primaryKeyword} — ESP, aimbot, and radar for PC',
 		summary:
 			'{brand} is an undetected {game} cheat package for Windows PC. Includes ESP, soft aim, and radar, with {antiCheat} maintenance after patches.',
-		heroLede: 'Undetected ESP, soft aim, and radar for Escape from Tarkov on Windows PC.',
-		blogLabel: 'Tarkov Intel',
+		heroLede: 'Undetected ESP, soft aim, and radar for Valorant on Windows PC.',
+		blogLabel: 'Valorant Intel',
 		ctaBuy: 'Get Access',
 		ctaBuyShort: 'Buy',
 		featuresIntro: 'Everything included in one license for {game} on Windows PC.',
 		storeIntro: 'Pick a plan. Same features on both. Instant delivery after payment.',
-		statusIntro: 'Check here after a {game} or {antiCheat} patch before you raid.',
+		statusIntro: 'Check here after a {game} or {antiCheat} patch before you queue.',
 		previewIntro:
-			'{brand} for Escape from Tarkov — ESP wallhack, soft aim, 2D radar, and BattlEye rebuilds after patches.',
+			'{brand} for Valorant — ESP wallhack, soft aim, 2D radar, and Vanguard rebuilds after patches.',
 		setupIntro: 'Install {brand} on Windows PC after you buy. Follow these short steps.',
 		supportIntro: 'Need help with {brand}? Email {email} with your order ID.',
 		faqIntro: 'Short answers about delivery, setup, updates, and refunds.',
@@ -149,33 +149,33 @@ export const brand = {
 		reviewsImageCaption: 'What buyers say about {primaryKeyword}',
 		images: [
 			{
-				src: '/images/tarkov-cheats-esp.webp',
-				title: 'ESP overlay in Escape from Tarkov',
-				caption: 'Player ESP boxes and distance readouts during a raid',
+				src: '/images/valorant-cheats-esp.webp',
+				title: 'ESP overlay in Valorant',
+				caption: 'Player ESP boxes and distance readouts during a match',
 			},
 			{
-				src: '/images/tarkov-cheats-wallhack.webp',
-				title: 'Wallhack visibility for Tarkov raids',
-				caption: 'PMC and Scav outlines through walls and terrain',
+				src: '/images/valorant-cheats-wallhack.webp',
+				title: 'Wallhack visibility for Valorant matches',
+				caption: 'agent and enemy outlines through walls and terrain',
 			},
 			{
-				src: '/images/tarkov-cheats-aimbot.webp',
-				title: 'Soft aim assist for Tarkov',
+				src: '/images/valorant-cheats-aimbot.webp',
+				title: 'Soft aim assist for Valorant',
 				caption: 'Configurable soft aim FOV and bone priority',
 			},
 			{
-				src: '/images/tarkov-cheats-aimbot-view.webp',
-				title: 'Aimbot view in Tarkov Cheats',
+				src: '/images/valorant-cheats-aimbot-view.webp',
+				title: 'Aimbot view in Valorant Cheats',
 				caption: 'In-menu aimbot controls for Windows PC',
 			},
 			{
-				src: '/images/tarkov-cheats-radar.webp',
+				src: '/images/valorant-cheats-radar.webp',
 				title: '2D radar threat overlay',
-				caption: 'Radar cues for flanks near extracts',
+				caption: 'Radar cues for flanks near sites',
 			},
 			{
-				src: '/images/tarkov-cheats-raid.webp',
-				title: 'Tarkov Cheats license plans',
+				src: '/images/valorant-cheats-match.webp',
+				title: 'Valorant Cheats license plans',
 				caption: 'Monthly and lifetime plans for Windows PC',
 			},
 		],
