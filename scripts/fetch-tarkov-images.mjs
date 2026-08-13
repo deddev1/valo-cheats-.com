@@ -1,12 +1,12 @@
 import { mkdir, readdir, unlink, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import sharp from 'sharp';
-import { buildOverlaySvg } from './valorant-hack-overlays.mjs';
+import { buildOverlaySvg } from './tarkov-hack-overlays.mjs';
 
 const imagesDir = path.resolve('public/images');
 const publicDir = path.resolve('public');
 
-/** Verified IGN Valorant screenshot CDN paths. */
+/** Verified IGN Escape from Tarkov screenshot CDN paths. */
 const ME_G = 'https://sm.ign.com/t/ign_me/gallery/c/call-of-du';
 const ME = 'https://sm.ign.com/t/ign_me/screenshot/c/call-of-du';
 const NL = 'https://sm.ign.com/t/ign_nl/screenshot/c/call-of-du';
@@ -14,78 +14,78 @@ const BR = 'https://sm.ign.com/t/ign_br/screenshot/default';
 const PK = 'https://sm.ign.com/t/ign_pk/screenshot/default';
 
 /**
- * Valorant cheats image pipeline:
- * 1. Download real Valorant gameplay from IGN
- * 2. Composite ESP / aimbot / radar / mod-menu overlays for valorant cheats marketing
+ * Tarkov cheats image pipeline:
+ * 1. Download real Escape from Tarkov gameplay from IGN
+ * 2. Composite ESP / aimbot / radar / mod-menu overlays for tarkov cheats marketing
  */
 const KEYWORD_ASSETS = [
 	{
-		file: 'valorant-cheats-hero.webp',
-		url: `${ME_G}/valorant-screenshots_wjkx.1400.jpg`,
+		file: 'tarkov-cheats-hero.webp',
+		url: `${ME_G}/escape-from-tarkov-screenshots_wjkx.1400.jpg`,
 		overlay: 'hero',
 	},
 	{
-		file: 'valorant-cheats-aimbot.webp',
-		url: `${ME}/valorant-screenshots_wjb1.1400.jpg`,
+		file: 'tarkov-cheats-aimbot.webp',
+		url: `${ME}/escape-from-tarkov-screenshots_wjb1.1400.jpg`,
 		overlay: 'aimbot',
 	},
 	{
-		file: 'valorant-cheats-esp-wallhack.webp',
-		url: `${ME}/valorant-screenshots_55fp.1400.jpg`,
+		file: 'tarkov-cheats-esp-wallhack.webp',
+		url: `${ME}/escape-from-tarkov-screenshots_55fp.1400.jpg`,
 		overlay: 'wallhack',
 	},
 	{
-		file: 'valorant-squad-fight.webp',
-		url: `${ME}/valorant-screenshots_67cp.1400.jpg`,
+		file: 'tarkov-squad-fight.webp',
+		url: `${ME}/escape-from-tarkov-screenshots_67cp.1400.jpg`,
 		overlay: 'esp',
 	},
 	{
-		file: 'valorant-cheats-package.webp',
-		url: `${ME}/valorant-screenshots_anf4.1400.jpg`,
+		file: 'tarkov-cheats-package.webp',
+		url: `${ME}/escape-from-tarkov-screenshots_anf4.1400.jpg`,
 		overlay: 'menu',
 	},
 	{
-		file: 'valorant-cheats-cover.webp',
-		url: `${ME}/valorant-screenshots_7pr8.1400.jpg`,
+		file: 'tarkov-cheats-cover.webp',
+		url: `${ME}/escape-from-tarkov-screenshots_7pr8.1400.jpg`,
 		overlay: 'esp',
 	},
 	{
-		file: 'valorant-header-art.webp',
-		url: `${ME}/valorant-screenshots_c36j.1400.jpg`,
+		file: 'tarkov-header-art.webp',
+		url: `${ME}/escape-from-tarkov-screenshots_c36j.1400.jpg`,
 		overlay: 'hero',
 	},
 	{
-		file: 'valorant-loadout-builder.webp',
-		url: `${NL}/valorant-screenshots_e5gw.1400.jpg`,
+		file: 'tarkov-loadout-builder.webp',
+		url: `${NL}/escape-from-tarkov-screenshots_e5gw.1400.jpg`,
 		overlay: 'menu',
 	},
 	{
-		file: 'valorant-battle-royale-combat.webp',
-		url: `${ME}/valorant-screenshots_4h92.1400.jpg`,
+		file: 'tarkov-battle-royale-combat.webp',
+		url: `${ME}/escape-from-tarkov-screenshots_4h92.1400.jpg`,
 		overlay: 'esp',
 	},
 	{
-		file: 'valorant-site-fight.webp',
+		file: 'tarkov-extract-fight.webp',
 		url: `${BR}/goulag-inside_zusa.1400.png`,
-		overlay: 'site',
+		overlay: 'extract',
 	},
 	{
-		file: 'valorant-player-esp.webp',
-		url: `${ME}/valorant-screenshots_rb92.1400.jpg`,
+		file: 'tarkov-player-esp.webp',
+		url: `${ME}/escape-from-tarkov-screenshots_rb92.1400.jpg`,
 		overlay: 'esp',
 	},
 	{
-		file: 'valorant-deathmatch-combat.webp',
+		file: 'tarkov-scav-run-combat.webp',
 		url: `${BR}/plunder_px6d.1400.png`,
-		overlay: 'deathmatch',
+		overlay: 'scav-run',
 	},
 	{
-		file: 'valorant-deathmatch-mode.webp',
+		file: 'tarkov-scav-run-mode.webp',
 		url: `${BR}/parachuting_qhh2.1400.png`,
 		overlay: 'loot',
 	},
 	{
-		file: 'valorant-verdansk-map.webp',
+		file: 'tarkov-verdansk-map.webp',
 		url: `${PK}/wz-verdansksubway-1601169413816_x2hg.1400.jpg`,
 		overlay: 'map',
 	},
@@ -94,12 +94,12 @@ const KEYWORD_ASSETS = [
 const REMOVE_PATTERNS = [
 	/^fortnite-/,
 	/-\d+w\.webp$/i,
-	/^valorant-cheats-logo/,
+	/^tarkov-cheats-logo/,
 ];
 
 async function fetchBase(url) {
 	const res = await fetch(url, {
-		headers: { 'User-Agent': 'Mozilla/5.0 (compatible; ValorantHacksSite/1.0)' },
+		headers: { 'User-Agent': 'Mozilla/5.0 (compatible; TarkovHacksSite/1.0)' },
 	});
 	if (!res.ok) throw new Error(`HTTP ${res.status}`);
 	return Buffer.from(await res.arrayBuffer());
@@ -123,7 +123,7 @@ async function composeHackImage(baseBuffer, overlayPreset) {
 async function cleanImagesDir() {
 	const files = await readdir(imagesDir).catch(() => []);
 	for (const file of files) {
-		if (file.includes('valorant-cheats-logo')) continue;
+		if (file.includes('tarkov-cheats-logo')) continue;
 		if (REMOVE_PATTERNS.some((pattern) => pattern.test(file))) {
 			await unlink(path.join(imagesDir, file));
 			console.log(`Removed ${file}`);
@@ -133,12 +133,12 @@ async function cleanImagesDir() {
 
 async function generateBrandAssets(heroBuffer) {
 	const logoBuffer = await sharp(heroBuffer)
-		.site({ left: 420, top: 180, width: 520, height: 520 })
+		.extract({ left: 420, top: 180, width: 520, height: 520 })
 		.resize(512, 512, { fit: 'cover' })
 		.webp({ quality: 88 })
 		.toBuffer();
 
-	await writeFile(path.join(imagesDir, 'valorant-cheats-logo.webp'), logoBuffer);
+	await writeFile(path.join(imagesDir, 'tarkov-cheats-logo.webp'), logoBuffer);
 
 	for (const { name, size } of [
 		{ name: 'favicon-16x16.png', size: 16 },
@@ -165,7 +165,7 @@ for (const asset of KEYWORD_ASSETS) {
 		await writeFile(path.join(imagesDir, asset.file), webp);
 		console.log(`  ✓ ${asset.file} (${webp.length} bytes)`);
 		saved++;
-		if (asset.file === 'valorant-cheats-hero.webp') heroBuffer = webp;
+		if (asset.file === 'tarkov-cheats-hero.webp') heroBuffer = webp;
 	} catch (err) {
 		console.warn(`  ✗ Skip ${asset.file}: ${err.message}`);
 	}
@@ -176,4 +176,4 @@ if (heroBuffer) {
 	console.log('Generated logo + favicons from hero.');
 }
 
-console.log(`\nDone — ${saved}/${KEYWORD_ASSETS.length} Valorant cheats images (IGN base + ESP/aimbot overlays).`);
+console.log(`\nDone — ${saved}/${KEYWORD_ASSETS.length} Tarkov cheats images (IGN base + ESP/aimbot overlays).`);

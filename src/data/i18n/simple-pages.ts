@@ -50,16 +50,16 @@ export const simplePageCopy: Partial<Record<PageId, SimplePageCopy>> = {
 			{
 				h2: 'ESP & wallhack',
 				paragraphs: [
-					'See agents, enemies, ultimates, and spike through walls with distance readouts.',
-					'Use filters so the overlay stays clear in Haven, Icebox, and deathmatch chaos.',
+					'See PMCs, Scavs, bosses, and loot through walls with distance readouts.',
+					'Use filters so the overlay stays clear in dorms, Factory, and scav-run chaos.',
 				],
-				list: ['Player boxes & distance', 'Orb and spike markers', 'Enemy and ally filters'],
+				list: ['Player boxes & distance', 'Loot and extract markers', 'Boss and Scav filters'],
 			},
 			{
 				h2: 'Aimbot & soft aim',
 				paragraphs: [
 					'Aim help you can tune to feel natural.',
-					'Set FOV, smoothness, and bone priority per weapon before you queue.',
+					'Set FOV, smoothness, and bone priority per weapon before you raid.',
 				],
 				list: ['Smooth aim strength', 'FOV and bone priority', 'Hotkeys mid-match'],
 			},
@@ -67,9 +67,9 @@ export const simplePageCopy: Partial<Record<PageId, SimplePageCopy>> = {
 				h2: 'Radar',
 				paragraphs: [
 					'A simple 2D radar for threats outside your view.',
-					'Spot flanks near sites without filling the whole screen.',
+					'Spot flanks near extracts without filling the whole screen.',
 				],
-				list: ['Nearby enemy cues', 'Adjustable range', 'Works in Unrated & Competitive'],
+				list: ['Nearby enemy cues', 'Adjustable range', 'Works in PMC & Scav'],
 			},
 			{
 				h2: 'Updates & support',
@@ -124,18 +124,18 @@ export const simplePageCopy: Partial<Record<PageId, SimplePageCopy>> = {
 		h1: 'Status',
 		intro: brandCopy.statusIntro,
 		ctaPrimary: brandCopy.ctaBuy,
-		ctaSecondary: 'Valorant Cheats overview',
-		ctaSecondaryHref: '/valorant-cheats/',
+		ctaSecondary: 'Tarkov Cheats overview',
+		ctaSecondaryHref: '/tarkov-cheats/',
 		galleryTitle: 'In-game look',
 		sections: [
 			{
 				h2: 'Current status',
 				paragraphs: [
-					'As of 13 Aug 2026 the package is online for Valorant on Windows PC. We post a new note here when a game or Vanguard patch needs a rebuild.',
-					'If Status is green, you can queue. If we are rebuilding, wait for the next note.',
+					'As of 13 Aug 2026 the package is online for Escape from Tarkov on Windows PC. We post a new note here when a game or BattlEye patch needs a rebuild.',
+					'If Status is green, you can raid. If we are rebuilding, wait for the next note.',
 				],
 				list: [
-					'Check this page before every match after a patch',
+					'Check this page before every raid after a patch',
 					'Monthly and lifetime licenses get rebuilds while active',
 					'No cheat stays undetected forever — status first, then play',
 				],
@@ -157,34 +157,34 @@ export const simplePageCopy: Partial<Record<PageId, SimplePageCopy>> = {
 	hacks: page({
 		title: brandSeo.previewTitle,
 		description: brandSeo.previewDescription,
-		h1: 'Valorant Cheats',
+		h1: 'Tarkov Cheats',
 		intro: brandCopy.previewIntro,
 		ctaPrimary: brandCopy.ctaBuy,
 		ctaSecondary: 'View features',
 		ctaSecondaryHref: '/features/',
-		galleryTitle: 'In-match look',
+		galleryTitle: 'In-raid look',
 		sections: [
 			{
 				h2: 'What you get',
 				paragraphs: [
-					'One license for Valorant on Windows PC — built for Unrated and Competitive matches.',
+					'One license for Escape from Tarkov on Windows PC — built for PMC raids and Scav runs.',
 				],
 				list: [
 					'ESP / wallhack with distance',
 					'Soft aim & aimbot profiles',
 					'2D radar for flanks',
-					'Vanguard rebuilds after patches',
+					'BattlEye rebuilds after patches',
 				],
 			},
 			{
-				h2: 'Built for Valorant matches',
+				h2: 'Built for Tarkov raids',
 				paragraphs: [
-					'Read agents and enemies before you push, mark spike and orbs, and stay aware near sites. Tune soft aim per weapon class for Haven, Icebox, and long-range maps.',
+					'Read PMCs and Scavs before you push, mark loot worth the risk, and stay aware near extracts. Tune soft aim per weapon class for dorms, Factory, and long-range maps.',
 				],
 				list: [
-					'<a href="/valorant-esp/">ESP guide</a>',
-					'<a href="/valorant-aimbot/">Aimbot controls</a>',
-					'<a href="/valorant-radar-hack/">Radar overlay</a>',
+					'<a href="/tarkov-esp/">ESP guide</a>',
+					'<a href="/tarkov-aimbot/">Aimbot controls</a>',
+					'<a href="/tarkov-radar-hack/">Radar overlay</a>',
 					'<a href="/updates/">Live status</a>',
 				],
 			},
@@ -199,52 +199,52 @@ export const simplePageCopy: Partial<Record<PageId, SimplePageCopy>> = {
 			},
 		],
 	}),
-	'valorant-esp': page({
-		title: 'Valorant ESP | {brand}',
+	'tarkov-esp': page({
+		title: 'Tarkov ESP | {brand}',
 		description:
-			'Valorant ESP and wallhack for Valorant on Windows PC — player boxes, distance, spike filters, and clear overlays in matches.',
+			'Tarkov ESP and wallhack for Escape from Tarkov on Windows PC — player boxes, distance, loot filters, and clear overlays in raids.',
 		h1: 'ESP',
-		intro: 'See players and spike through walls during Valorant matches. Part of the same {brand} license.',
+		intro: 'See players and loot through walls during Tarkov raids. Part of the same {brand} license.',
 		ctaPrimary: brandCopy.ctaBuy,
-		ctaSecondary: 'Valorant Cheats overview',
-		ctaSecondaryHref: '/valorant-cheats/',
-		galleryTitle: 'ESP in match',
+		ctaSecondary: 'Tarkov Cheats overview',
+		ctaSecondaryHref: '/tarkov-cheats/',
+		galleryTitle: 'ESP in raid',
 		sections: [
 			{
 				h2: 'What ESP shows',
-				paragraphs: ['Boxes, distance, and filters for agents, enemies, ultimates, and spike.'],
-				list: ['Player ESP', 'Orb markers', 'Enemy and ally filters'],
+				paragraphs: ['Boxes, distance, and filters for PMCs, Scavs, bosses, and loot.'],
+				list: ['Player ESP', 'Loot markers', 'Boss and Scav filters'],
 			},
 			{
 				h2: 'When to use it',
-				paragraphs: ['Clear Haven, Icebox, and Deathmatch without flooding the screen.'],
+				paragraphs: ['Clear dorms, Factory, and scav runs without flooding the screen.'],
 				list: ['Tune opacity', 'Filter noise', 'Pair with radar'],
 			},
 			{
 				h2: 'Next steps',
 				paragraphs: ['ESP is included with aimbot and radar in one plan.'],
 				list: [
-					'<a href="/valorant-cheats/">Full product</a>',
+					'<a href="/tarkov-cheats/">Full product</a>',
 					'<a href="/features/">All features</a>',
 					'<a href="/pricing/">Store</a>',
 				],
 			},
 		],
 	}),
-	'valorant-aimbot': page({
-		title: 'Valorant Aimbot | {brand}',
+	'tarkov-aimbot': page({
+		title: 'Tarkov Aimbot | {brand}',
 		description:
-			'Valorant aimbot and soft aim for Valorant on Windows PC — FOV, smoothness, and bone priority you can tune per weapon.',
+			'Tarkov aimbot and soft aim for Escape from Tarkov on Windows PC — FOV, smoothness, and bone priority you can tune per weapon.',
 		h1: 'Aimbot',
-		intro: 'Soft aim and aim assist you can tune for Valorant. Included in the same {brand} license.',
+		intro: 'Soft aim and aim assist you can tune for Tarkov. Included in the same {brand} license.',
 		ctaPrimary: brandCopy.ctaBuy,
-		ctaSecondary: 'Valorant Cheats overview',
-		ctaSecondaryHref: '/valorant-cheats/',
+		ctaSecondary: 'Tarkov Cheats overview',
+		ctaSecondaryHref: '/tarkov-cheats/',
 		galleryTitle: 'Aimbot view',
 		sections: [
 			{
 				h2: 'Controls',
-				paragraphs: ['Set FOV, smoothness, and bone priority before you queue.'],
+				paragraphs: ['Set FOV, smoothness, and bone priority before you raid.'],
 				list: ['Soft aim strength', 'Bone priority', 'Hotkeys mid-match'],
 			},
 			{
@@ -256,7 +256,7 @@ export const simplePageCopy: Partial<Record<PageId, SimplePageCopy>> = {
 				h2: 'Next steps',
 				paragraphs: ['Aimbot ships with ESP and radar in one license.'],
 				list: [
-					'<a href="/valorant-cheats/">Full product</a>',
+					'<a href="/tarkov-cheats/">Full product</a>',
 					'<a href="/features/">All features</a>',
 					'<a href="/pricing/">Store</a>',
 				],
@@ -264,27 +264,27 @@ export const simplePageCopy: Partial<Record<PageId, SimplePageCopy>> = {
 		],
 	}),
 	radar: page({
-		title: 'Valorant Radar | {brand}',
+		title: 'Tarkov Radar | {brand}',
 		description:
-			'Valorant 2D radar for Valorant on Windows PC — flank cues near sites without filling the whole screen.',
+			'Tarkov 2D radar for Escape from Tarkov on Windows PC — flank cues near extracts without filling the whole screen.',
 		h1: 'Radar',
 		intro: 'A simple 2D radar for threats outside your view. Included in the same {brand} license.',
 		ctaPrimary: brandCopy.ctaBuy,
-		ctaSecondary: 'Valorant Cheats overview',
-		ctaSecondaryHref: '/valorant-cheats/',
+		ctaSecondary: 'Tarkov Cheats overview',
+		ctaSecondaryHref: '/tarkov-cheats/',
 		galleryTitle: 'Radar overlay',
 		sections: [
 			{
 				h2: 'What it shows',
-				paragraphs: ['Nearby enemy cues with adjustable range for Unrated and Competitive.'],
-				list: ['Flank awareness', 'Site approaches', 'Adjustable range'],
+				paragraphs: ['Nearby enemy cues with adjustable range for PMC and Scav runs.'],
+				list: ['Flank awareness', 'Extract approaches', 'Adjustable range'],
 			},
 			{
 				h2: 'With ESP',
 				paragraphs: ['Use radar for threats you cannot see yet. Use ESP when you push.'],
 				list: [
-					'<a href="/valorant-esp/">ESP guide</a>',
-					'<a href="/valorant-cheats/">Full product</a>',
+					'<a href="/tarkov-esp/">ESP guide</a>',
+					'<a href="/tarkov-cheats/">Full product</a>',
 					'<a href="/pricing/">Store</a>',
 				],
 			},

@@ -8,12 +8,12 @@ export const cannibalRedirectTargets = {
 	undetected: 'hacks',
 	'mod-menu': 'hacks',
 	'unlock-all': 'hacks',
-	'aimbot-hack': 'valorant-aimbot',
-	'soft-aim': 'valorant-aimbot',
-	'esp-hack': 'valorant-esp',
-	wallhack: 'valorant-esp',
+	'aimbot-hack': 'tarkov-aimbot',
+	'soft-aim': 'tarkov-aimbot',
+	'esp-hack': 'tarkov-esp',
+	wallhack: 'tarkov-esp',
 	'cheat-download': 'setup',
-	vanguard: 'updates',
+	battleye: 'updates',
 } as const;
 
 export type CannibalPageId = keyof typeof cannibalRedirectTargets;
