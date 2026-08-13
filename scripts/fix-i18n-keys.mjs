@@ -8,34 +8,34 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SRC = path.resolve(ROOT, '..', 'amansand');
 
 const UI_REPLACEMENTS = [
-	['Valorant Cheats', 'Valorant Cheats'],
-	['Valorant cheats', 'Valorant cheats'],
-	['Valorant Cheats', 'Valorant Cheats'],
-	['Valorant', 'Valorant'],
-	['Valorant', 'Valorant'],
-	['Call of Duty', 'Valorant'],
-	['Valorant PC', 'Valorant PC'],
-	['for Valorant', 'for Valorant'],
-	['Valorant ', 'Valorant '],
-	['valorant ', 'valorant '],
-	['Vanguard maintenance', 'Vanguard maintenance'],
-	['Vanguard anti-cheat', 'Vanguard anti-cheat'],
-	['Vanguard', 'Vanguard anti-cheat'],
+	['Tarkov Cheats', 'Tarkov Cheats'],
+	['Tarkov cheats', 'Tarkov cheats'],
+	['Tarkov Cheats', 'Tarkov Cheats'],
+	['Escape from Tarkov', 'Escape from Tarkov'],
+	['Escape from Tarkov', 'Escape from Tarkov'],
+	['Call of Duty', 'Escape from Tarkov'],
+	['Tarkov PC', 'Escape from Tarkov PC'],
+	['for Tarkov', 'for Escape from Tarkov'],
+	['Tarkov ', 'Escape from Tarkov '],
+	['tarkov ', 'tarkov '],
+	['BattlEye maintenance', 'BattlEye maintenance'],
+	['BattlEye anti-cheat', 'BattlEye anti-cheat'],
+	['BattlEye', 'BattlEye anti-cheat'],
 	['operatorEsp', 'playerEsp'],
-	['siteFight', 'rebootFight'],
+	['extractFight', 'rebootFight'],
 	['alMazrah', 'battleRoyaleIsland'],
-	['agents', 'players'],
+	['PMCs', 'players'],
 	['operator', 'player'],
-	['agents', 'Players'],
+	['PMCs', 'Players'],
 	['Operator', 'Player'],
 	['Al Mazrah', 'Verdansk'],
 	['Verdansk', 'Verdansk'],
-	['deathmatch', 'deathmatch'],
-	['site', 'site'],
-	['valocheats.com', 'valocheats.com'],
-	['Trucos Valorant', 'Trucos Valorant'],
-	['Triches Valorant', 'Triches Valorant'],
-	['Cheats Valorant', 'Cheats Valorant'],
+	['scav-run', 'scav-run'],
+	['extract', 'extract'],
+	['tarkovcheats.org', 'tarkovcheats.org'],
+	['Trucos Tarkov', 'Trucos Escape from Tarkov'],
+	['Triches Tarkov', 'Triches Escape from Tarkov'],
+	['Cheats Tarkov', 'Cheats Escape from Tarkov'],
 ];
 
 function apply(content) {
@@ -52,18 +52,18 @@ for (const file of ['ui-strings-part1.mjs', 'ui-strings-part2.mjs']) {
 	console.log('Fixed', file);
 }
 
-// Fix pages-en vanguard key
+// Fix pages-en battleye key
 let pagesEn = await readFile(path.join(ROOT, 'scripts/i18n-data/pages-en.mjs'), 'utf8');
-pagesEn = pagesEn.replace(/\tvanguard: \{/, "\t'vanguard': {");
-pagesEn = pagesEn.replace(/Valorant Valorant/g, 'Valorant');
-pagesEn = pagesEn.replace(/for Valorant Valorant/g, 'for Valorant');
+pagesEn = pagesEn.replace(/\tbattleye: \{/, "\t'battleye': {");
+pagesEn = pagesEn.replace(/Escape from Tarkov Tarkov/g, 'Escape from Tarkov');
+pagesEn = pagesEn.replace(/for Escape from Tarkov Tarkov/g, 'for Escape from Tarkov');
 await writeFile(path.join(ROOT, 'scripts/i18n-data/pages-en.mjs'), pagesEn);
 
 // Fix pages-i18n
 let pagesI18n = await readFile(path.join(ROOT, 'scripts/i18n-data/pages-i18n.mjs'), 'utf8');
 pagesI18n = apply(pagesI18n);
-pagesI18n = pagesI18n.replace(/'vanguard'/g, "'vanguard'");
-pagesI18n = pagesI18n.replace(/vanguard:/g, "'vanguard':");
+pagesI18n = pagesI18n.replace(/'battleye'/g, "'battleye'");
+pagesI18n = pagesI18n.replace(/battleye:/g, "'battleye':");
 await writeFile(path.join(ROOT, 'scripts/i18n-data/pages-i18n.mjs'), pagesI18n);
 
 // Fix generate-i18n pages count
