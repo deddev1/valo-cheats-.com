@@ -14,7 +14,7 @@ export default defineConfig({
 	devToolbar: { enabled: false },
 	server: {
 		host: true,
-		port: 8080,
+		port: 4321,
 	},
 	integrations: [react()],
 	build: {

@@ -1,0 +1,11 @@
+{
+	"remote.autoForwardPorts": true,
+	"remote.autoForwardPortsSource": "output",
+	"remote.portsAttributes": {
+		"4321": {
+			"label": "Astro dev",
+			"onAutoForward": "notify"
+		}
+	},
+	"forwardPorts": [4321]
+}

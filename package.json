@@ -6,7 +6,7 @@
 		"node": ">=22.12.0"
 	},
 	"scripts": {
-		"dev": "astro dev --port 8080",
+		"dev": "astro dev --background",
 		"sync:brand": "node scripts/sync-brand.mjs && node scripts/sync-cannibal-redirects.mjs",
 		"prebuild": "node scripts/sync-brand.mjs && node scripts/sync-cannibal-redirects.mjs",
 		"build": "astro build",
@@ -15,7 +15,7 @@
 		"dev:stop": "astro dev stop",
 		"dev:status": "astro dev status",
 		"dev:logs": "astro dev logs",
-		"preview:local": "npm run build && astro preview --host --port 8080",
+		"preview:local": "npm run build && astro preview --host --port 4321",
 		"optimize:images": "node scripts/optimize-responsive-images.mjs",
 		"fetch:images": "node scripts/fetch-valorant-images.mjs",
 		"generate:brand": "node scripts/generate-brand-assets.mjs",
