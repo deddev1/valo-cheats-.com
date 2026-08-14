@@ -112,12 +112,12 @@ const sitemapDefaults = {
 };
 
 const themeDefaults = {
-	accent: '#c026d3',
-	bg: '#08090a',
-	soft: '#e879f9',
-	deep: '#86198f',
-	hover: '#d946ef',
-	panel: '#0f1011',
+	accent: '#5311ee',
+	bg: '#0a0811',
+	soft: '#c3aef4',
+	deep: '#4907df',
+	hover: '#a07bf4',
+	panel: '#0a080c',
 };
 
 /** @param {unknown} value */
