@@ -10,7 +10,7 @@ function HomeAboutInner() {
 
 	return (
 		<section className="shell home__prose home__prose--en" aria-labelledby="home-about-title">
-			<h2 id="home-about-title">{t('home.aboutTitle')}</h2>
+			<h1 id="home-about-title" className="home-about__title">{t('home.aboutTitle')}</h1>
 			<p>{t('home.aboutP1')}</p>
 			<p>
 				{t('home.aboutP2Before')}{' '}
