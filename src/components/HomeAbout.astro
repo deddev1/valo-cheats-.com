@@ -5,10 +5,7 @@ const h = en.home;
 ---
 
 <section class="shell home__prose home__prose--en home-about" aria-labelledby="home-about-title">
-	<h1 id="home-about-title" class="home-about__title">
-		<span class="home-about__hq">HQ</span>
-		<span class="home-about__heading">{h.aboutTitle}</span>
-	</h1>
+	<h1 id="home-about-title" class="home-about__title">{h.aboutTitle}</h1>
 	<p class="home-about__lede">{h.aboutP1}</p>
 	<p class="home-about__links">
 		{h.aboutP2Before}{' '}
@@ -23,13 +20,10 @@ const h = en.home;
 	.home-about {
 		border-left: 3px solid var(--accent);
 		padding-left: 1rem;
+		margin-top: 0.75rem;
 	}
 
 	.home-about__title {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		gap: 0.5rem;
 		margin: 0 0 0.75rem;
 		font-family: var(--font-display);
 		font-size: 1.125rem;
@@ -40,27 +34,6 @@ const h = en.home;
 		text-wrap: balance;
 		text-rendering: optimizeLegibility;
 		-webkit-font-smoothing: antialiased;
-	}
-
-	.home-about__hq {
-		display: inline-flex;
-		align-items: center;
-		padding: 0.15rem 0.45rem;
-		border-radius: var(--radius-pill);
-		font-family: var(--font-sans);
-		font-size: 0.625rem;
-		font-weight: 700;
-		letter-spacing: 0.12em;
-		line-height: 1.2;
-		text-transform: uppercase;
-		color: var(--magenta-soft);
-		background: color-mix(in srgb, var(--accent) 22%, transparent);
-		border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
-		flex-shrink: 0;
-	}
-
-	.home-about__heading {
-		min-width: 0;
 	}
 
 	.home-about__lede {
