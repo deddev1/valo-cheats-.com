@@ -41,13 +41,13 @@ export function contentSrcSet(baseSrc: string): string | undefined {
 
 /** Homepage hero — lossless PNG master + WebP srcset for fast loads. */
 export const heroResponsive: ResponsiveWidth[] = [
-	{ src: '/images/valorant-cheats-hero-home.png', width: 1795 },
+	{ src: '/images/valorant-cheats-hero-home.png', width: 1280 },
 ];
 
 export const heroWebpResponsive: ResponsiveWidth[] = [
 	{ src: '/images/valorant-cheats-hero-home-640w.webp', width: 640 },
 	{ src: '/images/valorant-cheats-hero-home-960w.webp', width: 960 },
-	{ src: '/images/valorant-cheats-hero-home-1400w.webp', width: 1400 },
+	{ src: '/images/valorant-cheats-hero-home.png', width: 1280 },
 ];
 
 export const heroDesktopResponsive: ResponsiveWidth[] = heroResponsive;
@@ -64,8 +64,8 @@ export const heroPreloadSrcSet = heroWebpSrcSet;
 export const heroMimeType = 'image/webp';
 
 /** Native dimensions of valorant-cheats-hero-home.png */
-export const heroWidth = 1795;
-export const heroHeight = 876;
+export const heroWidth = 1280;
+export const heroHeight = 406;
 
 /** Responsive widths for below-fold content images. */
 export const contentWidths = [480, 960] as const;
