@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export type LocaleMeta = {
@@ -17,10 +17,51 @@ type Props = {
 
 export default function LanguageSwitcher({ currentLocale, locales, hrefForLocale }: Props) {
 	const { t } = useTranslation();
+	const panelRef = useRef<HTMLDivElement>(null);
 	const currentMeta = useMemo(
 		() => locales.find((l) => l.code === currentLocale) ?? locales[0],
 		[locales, currentLocale],
 	);
+
+	useEffect(() => {
+		const panel = panelRef.current;
+		if (!panel) return;
+
+		const onWheel = (event: WheelEvent) => {
+			if (panel.scrollHeight <= panel.clientHeight) return;
+			const atTop = panel.scrollTop <= 0;
+			const atBottom = panel.scrollTop + panel.clientHeight >= panel.scrollHeight - 1;
+			const scrollingUp = event.deltaY < 0;
+			const scrollingDown = event.deltaY > 0;
+			if ((scrollingUp && atTop) || (scrollingDown && atBottom)) return;
+			event.stopPropagation();
+		};
+
+		let touchStartY = 0;
+		const onTouchStart = (event: TouchEvent) => {
+			touchStartY = event.touches[0]?.clientY ?? 0;
+		};
+
+		const onTouchMove = (event: TouchEvent) => {
+			if (panel.scrollHeight <= panel.clientHeight) return;
+			const touchY = event.touches[0]?.clientY ?? touchStartY;
+			const deltaY = touchStartY - touchY;
+			const atTop = panel.scrollTop <= 0;
+			const atBottom = panel.scrollTop + panel.clientHeight >= panel.scrollHeight - 1;
+			if ((deltaY < 0 && atTop) || (deltaY > 0 && atBottom)) return;
+			event.stopPropagation();
+		};
+
+		panel.addEventListener('wheel', onWheel, { passive: true });
+		panel.addEventListener('touchstart', onTouchStart, { passive: true });
+		panel.addEventListener('touchmove', onTouchMove, { passive: true });
+
+		return () => {
+			panel.removeEventListener('wheel', onWheel);
+			panel.removeEventListener('touchstart', onTouchStart);
+			panel.removeEventListener('touchmove', onTouchMove);
+		};
+	}, []);
 
 	return (
 		<details className="lang-switcher">
@@ -35,7 +76,7 @@ export default function LanguageSwitcher({ currentLocale, locales, hrefForLocale
 				</svg>
 				<span>{currentMeta.nativeName}</span>
 			</summary>
-			<div className="lang-switcher__panel">
+			<div className="lang-switcher__panel" ref={panelRef}>
 				<p className="lang-switcher__note">
 					{currentLocale === 'en' ? t('common.englishOfficial') : t('common.englishIsOfficial')}
 				</p>
