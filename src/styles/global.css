@@ -5,24 +5,24 @@
 	--font-sans: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
 	--font-display: "Syne Variable", "Syne", ui-sans-serif, sans-serif;
 
-	/* Near-black canvas — Linear / open-source product surface ladder */
-	--bg: #08090a;
-	--bg-panel: #0f1011;
-	--bg-elevated: #161618;
-	--bg-hover: #1c1c1f;
-	--line: #23252a;
-	--line-soft: #1a1b1e;
-	--line-strong: #34343a;
+	/* Near-black purple canvas — matches sibling template (tarkov / fortnite) */
+	--bg: #0a0811;
+	--bg-panel: #0a080c;
+	--bg-elevated: #16141c;
+	--bg-hover: #1c1a24;
+	--line: #23212c;
+	--line-soft: #1a1820;
+	--line-strong: #34323e;
 	--ink: #f5f5f7;
 	--ink-muted: #a1a1aa;
 	--ink-faint: #8b8b93;
 
-	/* Single brand accent: magenta (user request) — used sparingly */
-	--magenta: #c026d3;
-	--magenta-soft: #e879f9;
-	--magenta-deep: #86198f;
+	/* Brand accent: electric purple from the provided template */
+	--magenta: #5311ee;
+	--magenta-soft: #c3aef4;
+	--magenta-deep: #4907df;
 	--accent: var(--magenta);
-	--accent-hover: #d946ef;
+	--accent-hover: #a07bf4;
 	--ok: #34d399;
 	--warn: #f43f5e;
 
