@@ -37,12 +37,11 @@ export type BrandThemeResolved = {
 };
 
 export const themeDefaults: BrandThemeInput = {
-	accent: '#5311ee',
-	bg: '#0a0811',
+	accent: '#c026d3',
+	bg: '#08090a',
 };
 
 export const themePresets: { id: string; label: string; accent: string; bg: string }[] = [
-	{ id: 'purple', label: 'Purple', accent: '#5311ee', bg: '#0a0811' },
 	{ id: 'magenta', label: 'Magenta', accent: '#c026d3', bg: '#08090a' },
 	{ id: 'valorant', label: 'Valorant', accent: '#ff4655', bg: '#0f1419' },
 	{ id: 'fortnite', label: 'Fortnite', accent: '#2b9dff', bg: '#0a0e17' },
