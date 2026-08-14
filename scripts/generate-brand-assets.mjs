@@ -8,7 +8,7 @@ const imagesDir = path.join(publicDir, 'images');
 const sourcePath =
 	'C:/Users/Aman/.cursor/projects/c-Users-Aman-valoranthacks/assets/c__Users_Aman_AppData_Roaming_Cursor_User_workspaceStorage_5fc01ad59007d6b1ec3564ba48b04eb7_images_image-4be7ee07-5934-4878-8eb6-1fb2f3143ab4.png';
 
-const BG = { r: 10, g: 6, b: 18, alpha: 1 }; // #0a0612 — matches theme-color
+const BG = { r: 10, g: 8, b: 17, alpha: 1 }; // #0a0811 — matches theme-color
 
 async function squareLogoBuffer(size) {
 	return sharp(sourcePath)
