@@ -5,7 +5,7 @@ import sharp from 'sharp';
 const imagesDir = path.resolve('public/images');
 
 /** Hero LCP asset — responsive widths for srcset */
-const HERO_WIDTHS = [480, 640, 960, 1400];
+const HERO_WIDTHS = [640, 1024, 1536];
 
 /** Below-fold content images — smaller variants for gallery/product cards */
 const CONTENT_WIDTHS = [480, 960];
@@ -17,15 +17,15 @@ const SKIP_PATTERNS = [
 ];
 
 async function optimizeHero() {
-	const source = path.join(imagesDir, 'valorant-esp-player-tags.webp');
+	const source = path.join(imagesDir, 'valorant-cheats-hero.webp');
 	const meta = await sharp(source).metadata();
 	const results = [];
 
 	for (const width of HERO_WIDTHS) {
 		if (meta.width && width > meta.width) continue;
-		const file = `valorant-esp-player-tags-${width}w.webp`;
+		const file = `valorant-cheats-hero-${width}w.webp`;
 		const dest = path.join(imagesDir, file);
-		const quality = width <= 480 ? 56 : width <= 640 ? 70 : 78;
+		const quality = width <= 640 ? 70 : width <= 1024 ? 78 : 82;
 		const buffer = await sharp(source)
 			.resize({ width, withoutEnlargement: true })
 			.webp({ quality, effort: 6 })
@@ -44,7 +44,7 @@ async function optimizeContentImages() {
 		(file) =>
 			file.endsWith('.webp') &&
 			!SKIP_PATTERNS.some((pattern) => pattern.test(file)) &&
-			file !== 'valorant-esp-player-tags.webp',
+			file !== 'valorant-cheats-hero.webp',
 	);
 
 	const results = [];

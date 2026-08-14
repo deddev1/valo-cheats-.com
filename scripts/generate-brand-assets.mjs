@@ -5,14 +5,26 @@ import sharp from 'sharp';
 const root = path.resolve('.');
 const publicDir = path.join(root, 'public');
 const imagesDir = path.join(publicDir, 'images');
-const sourcePath =
-	'C:/Users/Aman/.cursor/projects/c-Users-Aman-valoranthacks/assets/c__Users_Aman_AppData_Roaming_Cursor_User_workspaceStorage_5fc01ad59007d6b1ec3564ba48b04eb7_images_image-4be7ee07-5934-4878-8eb6-1fb2f3143ab4.png';
+const heroPath = path.join(imagesDir, 'valorant-cheats-hero.webp');
 
-const BG = { r: 10, g: 6, b: 18, alpha: 1 }; // #0a0612 — matches theme-color
+const BG = { r: 15, g: 25, b: 35, alpha: 1 }; // #0f1923
 
 async function squareLogoBuffer(size) {
-	return sharp(sourcePath)
-		.resize(size, size, { fit: 'contain', background: BG })
+	return sharp({
+		create: { width: size, height: size, channels: 4, background: BG },
+	})
+		.composite([
+			{
+				input: Buffer.from(`
+					<svg width="${size}" height="${size}" xmlns="http://www.w3.org/2000/svg">
+						<rect width="${size}" height="${size}" fill="#0f1923"/>
+						<path d="M${size * 0.19} ${size * 0.81} L${size * 0.5} ${size * 0.19} L${size * 0.81} ${size * 0.81} L${size * 0.66} ${size * 0.81} L${size * 0.5} ${size * 0.5} L${size * 0.34} ${size * 0.81} Z" fill="#ff4655"/>
+					</svg>
+				`),
+				top: 0,
+				left: 0,
+			},
+		])
 		.png()
 		.toBuffer();
 }
@@ -25,6 +37,7 @@ async function generateSiteLogo() {
 	const logoWebp = await sharp(logoPng).webp({ quality: 90, effort: 6 }).toBuffer();
 	await writeFile(path.join(imagesDir, 'valorant-cheats-logo.webp'), logoWebp);
 	console.log('Wrote public/images/valorant-cheats-logo.webp');
+	return logoPng;
 }
 
 async function generateFavicons(logoBuffer) {
@@ -48,11 +61,6 @@ async function generateFavicons(logoBuffer) {
 		await sharp(logoBuffer).resize(32, 32).png().toBuffer(),
 	);
 	console.log('Wrote public/favicon.ico (32×32 PNG)');
-
-	const svgBase64 = logoBuffer.toString('base64');
-	const faviconSvg = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512"><rect width="512" height="512" fill="#0a0612"/><image width="512" height="512" href="data:image/png;base64,${svgBase64}"/></svg>`;
-	await writeFile(path.join(publicDir, 'favicon.svg'), faviconSvg);
-	console.log('Wrote public/favicon.svg (embedded PNG)');
 }
 
 async function generateWebManifest() {
@@ -62,8 +70,8 @@ async function generateWebManifest() {
 		description: 'Undetected valorant cheats — ESP, aimbot, radar and for PC',
 		start_url: '/',
 		display: 'standalone',
-		background_color: '#0a0612',
-		theme_color: '#0a0612',
+		background_color: '#0f1923',
+		theme_color: '#0f1923',
 		icons: [
 			{ src: '/favicon.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
 			{ src: '/favicon.png', sizes: '192x192', type: 'image/png', purpose: 'maskable' },
@@ -75,8 +83,14 @@ async function generateWebManifest() {
 }
 
 await mkdir(imagesDir, { recursive: true });
-const logoBuffer = await squareLogoBuffer(512);
-await generateSiteLogo();
+const logoBuffer = await generateSiteLogo();
 await generateFavicons(logoBuffer);
 await generateWebManifest();
+
+if (await sharp(heroPath).metadata().catch(() => null)) {
+	const heroFull = await sharp(heroPath).png().toBuffer();
+	await writeFile(path.join(imagesDir, 'valorant-cheats-hero-full.png'), heroFull);
+	console.log('Wrote public/images/valorant-cheats-hero-full.png');
+}
+
 console.log('Brand assets generated.');
