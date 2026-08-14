@@ -39,8 +39,8 @@ function readBrand() {
 			if (!m) throw new Error('brand.ts missing keywords.primary');
 			return m[1];
 		})(),
-		themeBg: themeField('bg', '#08090a'),
-		themeAccent: themeField('accent', '#c026d3'),
+		themeBg: themeField('bg', '#0f1923'),
+		themeAccent: themeField('accent', '#ff4655'),
 	};
 }
 

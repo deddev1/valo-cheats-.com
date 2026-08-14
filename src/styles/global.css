@@ -5,24 +5,24 @@
 	--font-sans: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
 	--font-display: "Syne Variable", "Syne", ui-sans-serif, sans-serif;
 
-	/* Near-black canvas — Linear / open-source product surface ladder */
-	--bg: #08090a;
-	--bg-panel: #0f1011;
-	--bg-elevated: #161618;
-	--bg-hover: #1c1c1f;
-	--line: #23252a;
-	--line-soft: #1a1b1e;
-	--line-strong: #34343a;
+	/* Valorant canvas — overridden at runtime from brand.ts via Layout */
+	--bg: #0f1923;
+	--bg-panel: #1a242d;
+	--bg-elevated: #202932;
+	--bg-hover: #273039;
+	--line: #2c353d;
+	--line-soft: #222b35;
+	--line-strong: #3a424b;
 	--ink: #f5f5f7;
 	--ink-muted: #a1a1aa;
 	--ink-faint: #8b8b93;
 
-	/* Single brand accent: magenta (user request) — used sparingly */
-	--magenta: #c026d3;
-	--magenta-soft: #e879f9;
-	--magenta-deep: #86198f;
+	/* Valorant red accent — matches brand.theme in brand.ts */
+	--magenta: #ff4655;
+	--magenta-soft: #ece8e1;
+	--magenta-deep: #bd3944;
 	--accent: var(--magenta);
-	--accent-hover: #d946ef;
+	--accent-hover: #ff8b94;
 	--ok: #34d399;
 	--warn: #f43f5e;
 
