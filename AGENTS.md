@@ -13,7 +13,7 @@ Manage the background server with `astro dev stop`, `astro dev status`, and `ast
 This repo is a **reusable game template** with locked SEO rules.
 
 - Brand / domain / keywords: [src/data/brand.ts](./src/data/brand.ts) → `npm run sync:brand`
-- **Brand Studio (employees):** `npm run dev` → http://localhost:3000/brand-studio/
+- **Brand Studio (employees):** `npm run dev` → http://localhost:8080/brand-studio/
 - Employee playbook: [TEMPLATE-SEO.md](./TEMPLATE-SEO.md)
 - Cursor rules: `.cursor/rules/seo-locked.mdc`, `.cursor/rules/seo-content.mdc`
 
