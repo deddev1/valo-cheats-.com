@@ -33,9 +33,10 @@ const monthly = productInfo.plans.find((p) => p.id === 'monthly') ?? productInfo
 		--hero-pad-y: clamp(1rem, 2vw, 1.75rem);
 		--hero-stack: clamp(0.5rem, 1.1vw, 0.75rem);
 		/*
-		 * Match native hero art (1795×876 ≈ 2.05:1) so object-fit: cover does not crop/zoom.
+		 * Bar is a bit shorter than the native 1024/409 (~2.5:1) art.
+		 * Image stays undistorted via object-fit: cover (crops edges, no squash).
 		 */
-		--hero-ratio: 1795 / 876;
+		--hero-ratio: 3.15 / 1;
 		position: relative;
 		isolation: isolate;
 		display: grid;
@@ -63,9 +64,10 @@ const monthly = productInfo.plans.find((p) => p.id === 'monthly') ?? productInfo
 	}
 
 	.hero__media img {
+		/* Cover = keep proportions; crop top/bottom of the shorter bar */
 		object-fit: cover;
-		/* Full composition — tower center, agents right, dark left for copy */
-		object-position: center center;
+		/* Characters sit on the right — keep skyline + negative space on the left for copy */
+		object-position: 78% 42%;
 		image-rendering: auto;
 		transform: translateZ(0);
 		animation: hero-in 0.9s ease-out both;
@@ -292,48 +294,32 @@ const monthly = productInfo.plans.find((p) => p.id === 'monthly') ?? productInfo
 			height: auto;
 			display: block;
 			overflow: hidden;
-			position: relative;
-		}
-
-		.hero__media {
-			position: relative;
-			inset: auto;
-			aspect-ratio: 1795 / 876;
-			width: 100%;
 		}
 
 		.hero__media img {
 			object-fit: cover;
-			object-position: center center;
+			object-position: 78% 10%;
+		}
+
+		.hero__veil {
+			background: linear-gradient(
+				180deg,
+				rgba(5, 5, 6, 0.28) 0%,
+				rgba(5, 5, 6, 0.52) 42%,
+				rgba(5, 5, 6, 0.9) 78%,
+				rgba(5, 5, 6, 0.96) 100%
+			);
 		}
 
 		.hero__content {
-			position: relative;
-			z-index: 2;
-			margin-top: -5rem;
 			transform: none;
 			width: 100%;
-			min-height: 0;
+			min-height: clamp(18.5rem, 56svh, 28rem);
 			display: flex;
 			align-items: flex-end;
 			padding-block: 1.35rem 1.2rem;
 			padding-bottom: max(1.2rem, env(safe-area-inset-bottom, 0px));
 			box-sizing: border-box;
-		}
-
-		.hero__veil {
-			top: 0;
-			right: 0;
-			left: 0;
-			bottom: auto;
-			height: calc(100vw * 876 / 1795);
-			background: linear-gradient(
-				180deg,
-				rgba(5, 5, 6, 0.12) 0%,
-				rgba(5, 5, 6, 0.45) 45%,
-				rgba(5, 5, 6, 0.88) 78%,
-				rgba(5, 5, 6, 0.96) 100%
-			);
 		}
 
 		.hero__copy {
@@ -387,7 +373,7 @@ const monthly = productInfo.plans.find((p) => p.id === 'monthly') ?? productInfo
 
 	@media (max-width: 480px) {
 		.hero__content {
-			margin-top: -4.25rem;
+			min-height: clamp(17.5rem, 60svh, 26rem);
 			padding-block: 1.2rem 1.1rem;
 		}
 
@@ -411,7 +397,7 @@ const monthly = productInfo.plans.find((p) => p.id === 'monthly') ?? productInfo
 
 	@media (max-width: 360px) {
 		.hero__content {
-			margin-top: -3.75rem;
+			min-height: clamp(16.5rem, 64svh, 24rem);
 		}
 
 		.hero__brand {
@@ -426,7 +412,7 @@ const monthly = productInfo.plans.find((p) => p.id === 'monthly') ?? productInfo
 
 	@media (max-width: 900px) and (orientation: landscape) and (max-height: 480px) {
 		.hero__content {
-			margin-top: -3rem;
+			min-height: min(70svh, 16.5rem);
 			padding-block: 0.85rem 0.8rem;
 		}
 
