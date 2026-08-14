@@ -9,12 +9,12 @@ const CSP_BASE = [
 	"img-src 'self' data: blob: https:",
 	"font-src 'self' data:",
 	"style-src 'self' 'unsafe-inline'",
-	"upgrade-insecure-requests",
 ];
 
 /** Strict CSP for production / preview / Cloudflare. */
 export const CONTENT_SECURITY_POLICY = [
 	...CSP_BASE,
+	"upgrade-insecure-requests",
 	"script-src 'self'",
 	"script-src-attr 'none'",
 	"connect-src 'self'",
@@ -22,7 +22,7 @@ export const CONTENT_SECURITY_POLICY = [
 	"require-trusted-types-for 'script'",
 ].join('; ');
 
-/** Looser CSP so Vite HMR works under `astro dev`. */
+/** Looser CSP so Vite HMR and plain HTTP localhost work under `astro dev`. */
 export const CONTENT_SECURITY_POLICY_DEV = [
 	...CSP_BASE,
 	"script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:",
@@ -51,6 +51,9 @@ export function applySecurityHeaders(headers, { html = false, dev = false } = {}
 
 	if (dev) {
 		headers.set('Content-Security-Policy', CONTENT_SECURITY_POLICY_DEV);
+		// HSTS + upgrade-insecure-requests force https://localhost, which
+		// nothing serves in `astro dev` (Chrome -102 / ERR_CONNECTION_REFUSED).
+		headers.delete('Strict-Transport-Security');
 	}
 
 	if (html) {
