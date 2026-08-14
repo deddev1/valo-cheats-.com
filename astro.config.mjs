@@ -26,6 +26,9 @@ export default defineConfig({
 	},
 	vite: {
 		plugins: [tailwindcss(), brandStudioPlugin()],
+		server: {
+			allowedHosts: true,
+		},
 		build: {
 			cssMinify: true,
 			minify: 'terser',
