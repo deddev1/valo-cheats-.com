@@ -3,7 +3,7 @@ import HeroApp from './react/Hero';
 import type { LocaleCode } from '../data/i18n/locales';
 import { defaultLocale } from '../data/i18n/locales';
 import { productInfo, siteConfig } from '../data/site';
-import { heroWidth, heroHeight, heroSrcSet, heroSizes, heroSrc } from '../lib/responsive-images';
+import { heroWidth, heroHeight, heroSrcSet, heroWebpSrcSet, heroSizes, heroSrc } from '../lib/responsive-images';
 
 interface Props {
 	locale?: LocaleCode;
@@ -21,6 +21,7 @@ const monthly = productInfo.plans.find((p) => p.id === 'monthly') ?? productInfo
 	monthlyPrice={monthly.price}
 	heroSrc={heroSrc}
 	heroSrcSet={heroSrcSet}
+	heroWebpSrcSet={heroWebpSrcSet}
 	heroSizes={heroSizes}
 	heroWidth={heroWidth}
 	heroHeight={heroHeight}

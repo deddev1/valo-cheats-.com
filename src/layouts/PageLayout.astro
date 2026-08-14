@@ -7,8 +7,11 @@ import { getLocalizedPath, resolvePageContextFromPath, type PageId } from '../da
 import { valorantImages } from '../data/valorant';
 import {
 	heroPreloadSrc,
+	heroPreloadSrcSet,
 	heroSizes,
+	heroSrc,
 	heroSrcSet,
+	heroWebpSrcSet,
 	heroWidth,
 	heroHeight,
 	contentSrcSet,
@@ -108,7 +111,7 @@ const useHomeHero =
 	pageId={pageId}
 	extraGraph={extraGraph}
 	lcpImage={useHomeHero ? heroPreloadSrc : heroImage.endsWith('.webp') ? heroImage : undefined}
-	lcpImageSrcSet={useHomeHero ? heroSrcSet : contentSrcSet(heroImage)}
+	lcpImageSrcSet={useHomeHero ? heroPreloadSrcSet : contentSrcSet(heroImage)}
 	lcpImageSizes={useHomeHero ? heroSizes : '100vw'}
 >
 	<Navbar locale={locale} pageId={pageId} />
@@ -117,18 +120,23 @@ const useHomeHero =
 			<div class="banner__media">
 				{
 					useHomeHero ? (
-						<img
-							src={heroPreloadSrc}
-							srcset={heroSrcSet}
-							sizes={heroSizes}
-							alt={resolvedHeroAlt}
-							width={heroWidth}
-							height={heroHeight}
-							class="banner__img"
-							fetchpriority="high"
-							loading="eager"
-							decoding="async"
-						/>
+						<picture>
+							{heroWebpSrcSet ? (
+								<source type="image/webp" srcset={heroWebpSrcSet} sizes={heroSizes} />
+							) : null}
+							<img
+								src={heroSrc}
+								srcset={heroSrcSet}
+								sizes={heroSizes}
+								alt={resolvedHeroAlt}
+								width={heroWidth}
+								height={heroHeight}
+								class="banner__img"
+								fetchpriority="high"
+								loading="eager"
+								decoding="async"
+							/>
+						</picture>
 					) : (
 						<img
 							src={heroImage}

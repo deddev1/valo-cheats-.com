@@ -8,6 +8,7 @@ type Props = {
 	monthlyPrice: number;
 	heroSrc: string;
 	heroSrcSet?: string;
+	heroWebpSrcSet?: string;
 	heroSizes: string;
 	heroWidth: number;
 	heroHeight: number;
@@ -72,6 +73,7 @@ function HeroInner({
 	monthlyPrice,
 	heroSrc,
 	heroSrcSet,
+	heroWebpSrcSet,
 	heroSizes,
 	heroWidth,
 	heroHeight,
@@ -88,17 +90,22 @@ function HeroInner({
 	return (
 		<section className="hero" aria-label={title}>
 			<div className="hero__media">
-				<img
-					src={heroSrc}
-					{...(heroSrcSet ? { srcSet: heroSrcSet } : {})}
-					sizes={heroSizes}
-					alt={imageAlt}
-					width={heroWidth}
-					height={heroHeight}
-					fetchPriority="high"
-					loading="eager"
-					decoding="async"
-				/>
+				<picture>
+					{heroWebpSrcSet ? (
+						<source type="image/webp" srcSet={heroWebpSrcSet} sizes={heroSizes} />
+					) : null}
+					<img
+						src={heroSrc}
+						{...(heroSrcSet ? { srcSet: heroSrcSet } : {})}
+						sizes={heroSizes}
+						alt={imageAlt}
+						width={heroWidth}
+						height={heroHeight}
+						fetchPriority="high"
+						loading="eager"
+						decoding="async"
+					/>
+				</picture>
 			</div>
 			<div className="hero__veil" aria-hidden="true" />
 			<div className="shell hero__content">

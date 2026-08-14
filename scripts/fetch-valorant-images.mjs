@@ -47,7 +47,7 @@ const KEYWORD_ASSETS = [
 const PROTECTED_PATTERNS = [
 	/^valorant-cheats-logo/,
 	/^valorant-cheats-hero-home/,
-	/^valorant-cheats-hero\.png$/,
+	/^valorant-cheats-hero-home-\d+w\.webp$/,
 	/^valorant-cheats-(esp|wallhack|aimbot|aimbot-view|radar|match|gameplay)\.png$/,
 ];
 

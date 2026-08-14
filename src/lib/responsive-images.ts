@@ -39,21 +39,29 @@ export function contentSrcSet(baseSrc: string): string | undefined {
 	);
 }
 
-/** Homepage hero — single lossless PNG master (1795×876). */
+/** Homepage hero — lossless PNG master + WebP srcset for fast loads. */
 export const heroResponsive: ResponsiveWidth[] = [
 	{ src: '/images/valorant-cheats-hero-home.png', width: 1795 },
 ];
 
+export const heroWebpResponsive: ResponsiveWidth[] = [
+	{ src: '/images/valorant-cheats-hero-home-640w.webp', width: 640 },
+	{ src: '/images/valorant-cheats-hero-home-960w.webp', width: 960 },
+	{ src: '/images/valorant-cheats-hero-home-1400w.webp', width: 1400 },
+];
+
 export const heroDesktopResponsive: ResponsiveWidth[] = heroResponsive;
 
-/** Default LCP src — uncompressed PNG. */
+/** Default LCP src — PNG fallback for OG/schema; browsers prefer WebP via picture. */
 export const heroSrc = '/images/valorant-cheats-hero-home.png';
 export const heroSrcSet = buildSrcSet(heroResponsive);
+export const heroWebpSrcSet = buildSrcSet(heroWebpResponsive);
 export const heroSizes = '100vw';
 
-/** LCP preload — same PNG master. */
-export const heroPreloadSrc = heroSrc;
-export const heroMimeType = 'image/png';
+/** LCP preload — smallest WebP likely to cover initial viewport through port forward. */
+export const heroPreloadSrc = '/images/valorant-cheats-hero-home-960w.webp';
+export const heroPreloadSrcSet = heroWebpSrcSet;
+export const heroMimeType = 'image/webp';
 
 /** Native dimensions of valorant-cheats-hero-home.png */
 export const heroWidth = 1795;

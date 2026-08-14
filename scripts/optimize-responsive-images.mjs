@@ -25,10 +25,27 @@ async function optimizeHero() {
 		console.log('Skip hero optimize — valorant-cheats-hero-home.png not found.');
 		return [];
 	}
-	console.log(
-		`Skip hero WebP ladder — using lossless PNG (${meta.width}x${meta.height}) at /images/valorant-cheats-hero-home.png`,
-	);
-	return [];
+
+	const results = [];
+	const recompressed = await sharp(source).png({ compressionLevel: 9, effort: 10 }).toBuffer();
+	await writeFile(source, recompressed);
+	results.push({ file: 'valorant-cheats-hero-home.png', bytes: recompressed.length });
+	console.log(`Recompressed hero PNG (${meta.width}x${meta.height}) → ${recompressed.length} bytes`);
+
+	for (const width of [640, 960, 1400]) {
+		if (meta.width && width >= meta.width) continue;
+		const variant = `valorant-cheats-hero-home-${width}w.webp`;
+		const dest = path.join(imagesDir, variant);
+		const buffer = await sharp(source)
+			.resize({ width, withoutEnlargement: true })
+			.webp({ quality: 82, effort: 6 })
+			.toBuffer();
+		await writeFile(dest, buffer);
+		results.push({ file: variant, width, bytes: buffer.length });
+		console.log(`Wrote ${variant} (${buffer.length} bytes)`);
+	}
+
+	return results;
 }
 
 async function optimizeContentImages() {

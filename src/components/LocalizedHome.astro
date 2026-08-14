@@ -10,7 +10,7 @@ import { getLocaleContent, getPageContent } from '../data/i18n';
 import { getLocalizedPath } from '../data/i18n/routing';
 import type { LocaleCode } from '../data/i18n/locales';
 import { homeFaqs, homeSeo, productInfo, siteConfig, customerReviewStats } from '../data/site';
-import { heroPreloadSrc, heroSizes, heroSrcSet } from '../lib/responsive-images';
+import { heroPreloadSrc, heroPreloadSrcSet, heroSizes, heroSrcSet } from '../lib/responsive-images';
 import { defaultCrawlImageSrc } from '../data/page-images';
 
 interface Props {
@@ -99,7 +99,7 @@ const extraGraph: Record<string, unknown>[] = [
 	breadcrumbs={[{ label: ui.nav.home }]}
 	extraGraph={locale === 'en' ? extraGraph : extraGraph.filter((n) => n['@type'] !== 'FAQPage')}
 	lcpImage={heroPreloadSrc}
-	lcpImageSrcSet={heroSrcSet}
+	lcpImageSrcSet={heroPreloadSrcSet}
 	lcpImageSizes={heroSizes}
 >
 	<Navbar locale={locale} pageId="home" />
