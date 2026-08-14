@@ -1,0 +1,21 @@
+---
+import en from '../../public/locales/en/translation.json';
+
+const h = en.home;
+---
+
+<section class="shell home__prose home__prose--en" aria-labelledby="home-about-title">
+	<h1 id="home-about-title" class="home-about__title">{h.aboutTitle}</h1>
+	<p>{h.aboutP1}</p>
+	<p>
+		{h.aboutP2Before}{' '}
+		<a href="/valorant-cheats/">{h.aboutPillar}</a>
+		{h.aboutP2Mid}
+		<a href="/valorant-esp/">{h.aboutEsp}</a>
+		{h.aboutP2Mid}
+		<a href="/valorant-aimbot/">{h.aboutAimbot}</a>
+		{h.aboutP2Or}
+		<a href="/updates/">{h.aboutUndetected}</a>
+		{h.aboutP2After}
+	</p>
+</section>
