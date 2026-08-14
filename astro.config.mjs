@@ -26,6 +26,10 @@ export default defineConfig({
 	},
 	vite: {
 		plugins: [tailwindcss(), brandStudioPlugin()],
+		server: {
+			// Allow Cloudflare/Cursor forwarded hosts in cloud dev.
+			allowedHosts: true,
+		},
 		build: {
 			cssMinify: true,
 			minify: 'terser',
