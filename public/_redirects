@@ -69,6 +69,26 @@
 /faq/pmc-raids-and-scav-runs /faq/unrated-and-competitive/ 301
 /faq/pmc-raids-and-scav-runs/ /faq/unrated-and-competitive/ 301
 
+# EN money slug under a locale prefix → that locale's cheats URL
+/es/valorant-cheats /es/hacks-trucos-valorant/ 301
+/es/valorant-cheats/ /es/hacks-trucos-valorant/ 301
+/fr/valorant-cheats /fr/hacks-triche-valorant/ 301
+/fr/valorant-cheats/ /fr/hacks-triche-valorant/ 301
+/pt/valorant-cheats /pt/hacks-cheats-valorant/ 301
+/pt/valorant-cheats/ /pt/hacks-cheats-valorant/ 301
+/it/valorant-cheats /it/hacks-trucchi-valorant/ 301
+/it/valorant-cheats/ /it/hacks-trucchi-valorant/ 301
+/pl/valorant-cheats /pl/hacks-cheatow-valorant/ 301
+/pl/valorant-cheats/ /pl/hacks-cheatow-valorant/ 301
+/ru/valorant-cheats /ru/haksy-chity-valorant/ 301
+/ru/valorant-cheats/ /ru/haksy-chity-valorant/ 301
+/tr/valorant-cheats /tr/valorant-hile-hacks/ 301
+/tr/valorant-cheats/ /tr/valorant-hile-hacks/ 301
+/uk/valorant-cheats /uk/haksy-chity-valorant/ 301
+/uk/valorant-cheats/ /uk/haksy-chity-valorant/ 301
+/ro/valorant-cheats /ro/hacks-cheats-valorant/ 301
+/ro/valorant-cheats/ /ro/hacks-cheats-valorant/ 301
+
 # Broken review slug fixes
 /reviews/valorant-radar-hack-review-vanlifefn /reviews/valorant-radar-hack-review-vanlifeval/ 301
 /reviews/valorant-radar-hack-review-vanlifefn/ /reviews/valorant-radar-hack-review-vanlifeval/ 301
