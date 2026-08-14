@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import { productInfo, siteConfig } from '../data/site';
 import { brandTheme, brandThemeInlineStyle, brandThemeRootCss } from '../data/brand-theme';
+import { heroMimeType } from '../lib/responsive-images';
 import I18nHead from '../components/I18nHead.astro';
 import LocaleSuggest from '../components/LocaleSuggest.astro';
 import InlineBrandEditor from '../components/InlineBrandEditor.astro';
@@ -55,8 +56,8 @@ const ogImageURL = new URL(ogImage, siteConfig.url).href;
 const logoURL = new URL(siteConfig.logoRaster, siteConfig.url).href;
 const ogImageIsLogo = ogImage === siteConfig.logo;
 const ogImageType = ogImage.endsWith('.webp') ? 'image/webp' : 'image/png';
-const ogImageWidth = ogImageIsLogo ? '512' : '1920';
-const ogImageHeight = ogImageIsLogo ? '512' : '1080';
+const ogImageWidth = ogImageIsLogo ? '512' : ogImage.includes('hero-home') ? '1536' : '1920';
+const ogImageHeight = ogImageIsLogo ? '512' : ogImage.includes('hero-home') ? '1024' : '1080';
 const twitterCard = ogImageIsLogo ? 'summary' : 'summary_large_image';
 const robots = noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large';
 const siteDescription = `${productInfo.tagline}. ${productInfo.summary}`;
@@ -195,7 +196,7 @@ if (aboutNode) {
 					rel="preload"
 					as="image"
 					href={lcpImage ?? lcpImageSrcSet.split(' ')[0]}
-					type="image/webp"
+					type={lcpImage?.endsWith('.png') ? 'image/png' : heroMimeType}
 					fetchpriority="high"
 					imagesrcset={lcpImageSrcSet}
 					imagesizes={lcpImageSizes}
@@ -206,7 +207,7 @@ if (aboutNode) {
 						rel="preload"
 						as="image"
 						href={lcpImage}
-						type="image/webp"
+						type={lcpImage.endsWith('.png') ? 'image/png' : 'image/webp'}
 						fetchpriority="high"
 					/>
 				)

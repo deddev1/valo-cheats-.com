@@ -2,7 +2,7 @@ import { siteConfig } from './site';
 
 /** Screenshots used across product pages — simple valorant cheats keyword alts. */
 export const valorantImages = {
-	hero: '/images/valorant-cheats-hero-full.png',
+	hero: '/images/valorant-cheats-hero-home.png',
 	espWallhack: '/images/valorant-cheats-wallhack.webp',
 	aimbotCombat: '/images/valorant-cheats-aimbot.webp',
 	aimbotSkeleton: '/images/valorant-cheats-aimbot-view.webp',

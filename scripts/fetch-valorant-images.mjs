@@ -24,7 +24,6 @@ const MAP_SPLASH = {
 
 /** Primary site images — Valorant art only (no Tarkov / Warzone / CoD leftovers). */
 const KEYWORD_ASSETS = [
-	{ file: 'valorant-cheats-hero.webp', url: HERO_PROMO, overlay: 'hero', heroCrop: true },
 	{ file: 'valorant-cheats-esp.webp', url: MAP_SPLASH.ascent, overlay: 'esp' },
 	{ file: 'valorant-cheats-wallhack.webp', url: MAP_SPLASH.split, overlay: 'wallhack' },
 	{ file: 'valorant-cheats-aimbot.webp', url: MAP_SPLASH.bind, overlay: 'aimbot' },
@@ -49,6 +48,7 @@ const REMOVE_PATTERNS = [
 	/^fortnite-/,
 	/-\d+w\.webp$/i,
 	/^valorant-cheats-logo/,
+	/^valorant-cheats-hero-home/,
 	/^valorant-hero-ghost/,
 	/^zadeyo-/,
 	/^hero-banner/,
@@ -109,6 +109,7 @@ async function cleanImagesDir() {
 	const files = await readdir(imagesDir).catch(() => []);
 	for (const file of files) {
 		if (file.includes('valorant-cheats-logo')) continue;
+		if (file.includes('valorant-cheats-hero-home')) continue;
 		if (REMOVE_PATTERNS.some((pattern) => pattern.test(file))) {
 			await unlink(path.join(imagesDir, file));
 			console.log(`Removed ${file}`);

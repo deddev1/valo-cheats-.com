@@ -25,8 +25,8 @@ export const brand = {
 	logoRasterWidth: 512,
 	logoRasterHeight: 512,
 	logoAlt: 'Valorant Cheats logo',
-	defaultOgImage: '/images/valorant-cheats-hero-1024w.webp',
-	heroImage: '/images/valorant-cheats-hero-1024w.webp',
+	defaultOgImage: '/images/valorant-cheats-hero-home.png',
+	heroImage: '/images/valorant-cheats-hero-home.png',
 
 	plans: [
 		{ id: 'monthly', label: 'Monthly', price: 35, duration: 'P30D' },
@@ -41,11 +41,11 @@ export const brand = {
 	 */
 	theme: {
 		accent: '#ff4655',
-		bg: '#0f1923',
-		soft: '#ece8e1',
-		deep: '#bd3944',
-		hover: '#ff8b94',
-		panel: '#1a242d',
+		bg: '#07080d',
+		soft: '#edeaf2',
+		deep: '#7c3aed',
+		hover: '#ff7180',
+		panel: '#11121b',
 	},
 
 	/**
@@ -71,46 +71,32 @@ export const brand = {
 	 * Aim ~50–60 chars titles, ~140–160 chars descriptions.
 	 */
 	seo: {
-		/** Titles ≤60 chars; descriptions ~140–160 (Google SERP display). */
-		/** Home = brand hub. Money URL /valorant-cheats/ owns the head term. */
 		homeTitle: 'Valorant Cheats | Official Windows PC Site',
-		homeDescription:
-			'Official Valorant Cheats site for Windows PC. Compare features, store plans, and live status — then buy ESP, soft aim, and radar in one license.',
+		homeDescription: 'Official Valorant Cheats site for Windows PC. Compare features, store plans, and live status — then buy ESP, soft aim, and radar in one license.',
 		featuresTitle: '{game} Features | {brand}',
-		featuresDescription:
-			'Everything in one {game} license for Windows PC — ESP, soft aim, radar, spike tools, and patch updates after {antiCheat}. See what is included.',
+		featuresDescription: 'Everything in one {game} license for Windows PC — ESP, soft aim, radar, spike tools, and patch updates after {antiCheat}. See what is included.',
 		storeTitle: '{game} Store | {brand}',
-		storeDescription:
-			'Monthly and lifetime {game} plans for Windows PC. Same ESP, aimbot, and radar features on both. Instant delivery after you pay at checkout.',
+		storeDescription: 'Monthly and lifetime {game} plans for Windows PC. Same ESP, aimbot, and radar features on both. Instant delivery after you pay at checkout.',
 		statusTitle: '{game} Status | {brand}',
-		statusDescription:
-			'Live undetected status for {brand} after {game} or {antiCheat} patches. Check here before you queue on Windows PC so you play on a current build.',
-		/** Money page meta — primary target for "valorant cheats". */
+		statusDescription: 'Live undetected status for {brand} after {game} or {antiCheat} patches. Check here before you queue on Windows PC so you play on a current build.',
 		previewTitle: 'Valorant Cheats | Undetected ESP & Aimbot',
-		previewDescription:
-			'Buy undetected valorant cheats for Valorant on Windows PC. ESP, soft aim, radar, and Vanguard patch updates in one license with instant delivery.',
+		previewDescription: 'Buy undetected valorant cheats for Valorant on Windows PC. ESP, soft aim, radar, and Vanguard patch updates in one license with instant delivery.',
 		setupTitle: '{game} Setup | {brand}',
-		setupDescription:
-			'Install and launch {brand} on Windows PC after checkout. Short setup steps so you can queue faster. Follow each step in order before your first match.',
+		setupDescription: 'Install and launch {brand} on Windows PC after checkout. Short setup steps so you can queue faster. Follow each step in order before your first match.',
 		supportTitle: '{game} Support | {brand}',
-		supportDescription:
-			'Get help with {brand} on Windows PC. Email {email} with your order ID for setup, delivery, or billing help after you buy.',
+		supportDescription: 'Get help with {brand} on Windows PC. Email {email} with your order ID for setup, delivery, or billing help after you buy.',
 		faqTitle: '{game} FAQ | {brand}',
-		faqDescription:
-			'Short answers about {brand} for Valorant — delivery, setup, {antiCheat} updates, refunds, and Windows PC system notes before you buy a license.',
+		faqDescription: 'Short answers about {brand} for Valorant — delivery, setup, {antiCheat} updates, refunds, and Windows PC system notes before you buy a license.',
 		reviewsTitle: '{brand} Reviews | Buyer Feedback',
-		reviewsDescription:
-			'Buyer reviews for {brand} — ESP, soft aim, radar, and patch updates for Valorant on Windows PC. Real feedback from license holders who play.',
+		reviewsDescription: 'Buyer reviews for {brand} — ESP, soft aim, radar, and patch updates for Valorant on Windows PC. Real feedback from license holders who play.',
 		blogTitle: '{game} Intel | {brand}',
-		blogDescription:
-			'Guides and notes for {game} — ranked tips, ESP, aimbot, map control, and {antiCheat} update coverage for Windows PC players who queue to play.',
+		blogDescription: 'Guides and notes for {game} — ranked tips, ESP, aimbot, map control, and {antiCheat} update coverage for Windows PC players who queue to play.',
 	},
 
 	/** On-page marketing copy (tokens allowed) */
 	copy: {
 		tagline: 'Undetected {primaryKeyword} — ESP, aimbot, and radar for PC',
-		summary:
-			'{brand} is an undetected {game} cheat package for Windows PC. Includes ESP, soft aim, and radar, with {antiCheat} maintenance after patches.',
+		summary: '{brand} is an undetected {game} cheat package for Windows PC. Includes ESP, soft aim, and radar, with {antiCheat} maintenance after patches.',
 		heroLede: 'Undetected ESP, soft aim, and radar for Valorant on Windows PC.',
 		blogLabel: 'Valorant Intel',
 		ctaBuy: 'Get Access',
@@ -118,8 +104,7 @@ export const brand = {
 		featuresIntro: 'Everything included in one license for {game} on Windows PC.',
 		storeIntro: 'Pick a plan. Same features on both. Instant delivery after payment.',
 		statusIntro: 'Check here after a {game} or {antiCheat} patch before you queue.',
-		previewIntro:
-			'{brand} for Valorant — ESP wallhack, soft aim, 2D radar, and Vanguard rebuilds after patches.',
+		previewIntro: '{brand} for Valorant — ESP wallhack, soft aim, 2D radar, and Vanguard rebuilds after patches.',
 		setupIntro: 'Install {brand} on Windows PC after you buy. Follow these short steps.',
 		supportIntro: 'Need help with {brand}? Email {email} with your order ID.',
 		faqIntro: 'Short answers about delivery, setup, updates, and refunds.',

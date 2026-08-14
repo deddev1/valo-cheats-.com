@@ -1,5 +1,5 @@
 /**
- * Responsive image helpers — prefer compressed WebP for LCP and below-fold media.
+ * Responsive image helpers — homepage hero uses lossless PNG (no WebP compression).
  */
 
 export interface ResponsiveWidth {
@@ -8,7 +8,9 @@ export interface ResponsiveWidth {
 }
 
 /** Build a srcset string from width-tagged image paths. */
-export function buildSrcSet(widths: ResponsiveWidth[]): string {
+export function buildSrcSet(widths: ResponsiveWidth[]): string | undefined {
+	if (widths.length === 0) return undefined;
+	if (widths.length === 1) return `${widths[0].src} ${widths[0].width}w`;
 	return widths.map(({ src, width }) => `${src} ${width}w`).join(', ');
 }
 
@@ -37,29 +39,25 @@ export function contentSrcSet(baseSrc: string): string | undefined {
 	);
 }
 
-/**
- * Homepage / banner hero — compressed WebP ladder (not the 375KB+ PNG master).
- * Native art ~1024×409 (~2.5:1).
- */
+/** Homepage hero — single lossless PNG master (1536×1024). */
 export const heroResponsive: ResponsiveWidth[] = [
-	{ src: '/images/valorant-cheats-hero-640w.webp', width: 640 },
-	{ src: '/images/valorant-cheats-hero-1024w.webp', width: 1024 },
+	{ src: '/images/valorant-cheats-hero-home.png', width: 1536 },
 ];
 
 export const heroDesktopResponsive: ResponsiveWidth[] = heroResponsive;
 
-/** Default LCP src — mid ladder WebP (~56KB). */
-export const heroSrc = '/images/valorant-cheats-hero-1024w.webp';
+/** Default LCP src — uncompressed PNG. */
+export const heroSrc = '/images/valorant-cheats-hero-home.png';
 export const heroSrcSet = buildSrcSet(heroResponsive);
 export const heroSizes = '100vw';
 
-/** LCP preload — same compressed WebP. */
+/** LCP preload — same PNG master. */
 export const heroPreloadSrc = heroSrc;
-export const heroMimeType = 'image/webp';
+export const heroMimeType = 'image/png';
 
-/** Exact native dimensions (no zoom crop). */
-export const heroWidth = 1024;
-export const heroHeight = 409;
+/** Native dimensions of valorant-cheats-hero-home.png */
+export const heroWidth = 1536;
+export const heroHeight = 1024;
 
 /** Responsive widths for below-fold content images. */
 export const contentWidths = [480, 960] as const;

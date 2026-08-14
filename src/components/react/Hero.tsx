@@ -7,7 +7,7 @@ type Props = {
 	checkoutUrl: string;
 	monthlyPrice: number;
 	heroSrc: string;
-	heroSrcSet: string;
+	heroSrcSet?: string;
 	heroSizes: string;
 	heroWidth: number;
 	heroHeight: number;
@@ -90,7 +90,7 @@ function HeroInner({
 			<div className="hero__media">
 				<img
 					src={heroSrc}
-					srcSet={heroSrcSet}
+					{...(heroSrcSet ? { srcSet: heroSrcSet } : {})}
 					sizes={heroSizes}
 					alt={imageAlt}
 					width={heroWidth}

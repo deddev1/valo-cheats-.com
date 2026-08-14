@@ -13,29 +13,21 @@ const CONTENT_WIDTHS = [480, 960];
 const SKIP_PATTERNS = [
 	/-\d+w\.webp$/i,
 	/valorant-cheats-logo/i,
+	/valorant-cheats-hero-home/i,
 	/favicon/i,
 ];
 
 async function optimizeHero() {
-	const source = path.join(imagesDir, 'valorant-cheats-hero.webp');
-	const meta = await sharp(source).metadata();
-	const results = [];
-
-	for (const width of HERO_WIDTHS) {
-		if (meta.width && width > meta.width) continue;
-		const file = `valorant-cheats-hero-${width}w.webp`;
-		const dest = path.join(imagesDir, file);
-		const quality = width <= 640 ? 70 : width <= 1024 ? 78 : 82;
-		const buffer = await sharp(source)
-			.resize({ width, withoutEnlargement: true })
-			.webp({ quality, effort: 6 })
-			.toBuffer();
-		await writeFile(dest, buffer);
-		results.push({ file, width, bytes: buffer.length });
-		console.log(`Wrote ${file} (${buffer.length} bytes)`);
+	const source = path.join(imagesDir, 'valorant-cheats-hero-home.png');
+	const meta = await sharp(source).metadata().catch(() => null);
+	if (!meta) {
+		console.log('Skip hero optimize — valorant-cheats-hero-home.png not found.');
+		return [];
 	}
-
-	return results;
+	console.log(
+		`Skip hero WebP ladder — using lossless PNG (${meta.width}x${meta.height}) at /images/valorant-cheats-hero-home.png`,
+	);
+	return [];
 }
 
 async function optimizeContentImages() {

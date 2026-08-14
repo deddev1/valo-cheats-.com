@@ -65,8 +65,8 @@ const monthly = productInfo.plans.find((p) => p.id === 'monthly') ?? productInfo
 	.hero__media img {
 		/* Cover = keep proportions; crop top/bottom of the shorter bar */
 		object-fit: cover;
-		/* Prefer a bit higher in the frame so the agent head stays in view */
-		object-position: right 28%;
+		/* Characters sit on the right — keep skyline + negative space on the left for copy */
+		object-position: 78% 42%;
 		image-rendering: auto;
 		transform: translateZ(0);
 		animation: hero-in 0.9s ease-out both;
