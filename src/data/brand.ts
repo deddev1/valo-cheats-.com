@@ -71,15 +71,15 @@ export const brand = {
 	 * Aim ~50–60 chars titles, ~140–160 chars descriptions.
 	 */
 	seo: {
-		homeTitle: 'Valorant Cheats | Official Windows PC Site',
-		homeDescription: 'Official Valorant Cheats site for Windows PC. Compare features, store plans, and live status — then buy ESP, soft aim, and radar in one license.',
+		homeTitle: 'Valorant Cheats | Undetected Aimbot, ESP & Wallhack 2026',
+		homeDescription: 'Valorant cheats for PC with aimbot, ESP and wallhack features. Explore gameplay features, pricing, setup information and the latest updates.',
 		featuresTitle: '{game} Features | {brand}',
 		featuresDescription: 'Everything in one {game} license for Windows PC — ESP, soft aim, radar, spike tools, and patch updates after {antiCheat}. See what is included.',
 		storeTitle: '{game} Store | {brand}',
 		storeDescription: 'Monthly and lifetime {game} plans for Windows PC. Same ESP, aimbot, and radar features on both. Instant delivery after you pay at checkout.',
 		statusTitle: '{game} Status | {brand}',
 		statusDescription: 'Live undetected status for {brand} after {game} or {antiCheat} patches. Check here before you queue on Windows PC so you play on a current build.',
-		previewTitle: 'Valorant Cheats | Undetected ESP & Aimbot',
+		previewTitle: 'Valorant Cheats',
 		previewDescription: 'Buy undetected valorant cheats for Valorant on Windows PC. ESP, soft aim, radar, and Vanguard patch updates in one license with instant delivery.',
 		setupTitle: '{game} Setup | {brand}',
 		setupDescription: 'Install and launch {brand} on Windows PC after checkout. Short setup steps so you can queue faster. Follow each step in order before your first match.',
