@@ -1,4 +1,4 @@
-import { mkdir, readdir, unlink, writeFile } from 'node:fs/promises';
+import { access, mkdir, readdir, unlink, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import sharp from 'sharp';
 import { buildOverlaySvg } from './valorant-hack-overlays.mjs';
@@ -44,11 +44,16 @@ const KEYWORD_ASSETS = [
 	{ file: 'valorant-verdansk-map.webp', url: MAP_SPLASH.ascent, overlay: 'map' },
 ];
 
+const PROTECTED_PATTERNS = [
+	/^valorant-cheats-logo/,
+	/^valorant-cheats-hero-home/,
+	/^valorant-cheats-hero\.png$/,
+	/^valorant-cheats-(esp|wallhack|aimbot|aimbot-view|radar|match|gameplay)\.png$/,
+];
+
 const REMOVE_PATTERNS = [
 	/^fortnite-/,
 	/-\d+w\.webp$/i,
-	/^valorant-cheats-logo/,
-	/^valorant-cheats-hero-home/,
 	/^valorant-hero-ghost/,
 	/^zadeyo-/,
 	/^hero-banner/,
@@ -108,8 +113,7 @@ async function composeHackImage(baseBuffer, overlayPreset, asset = {}) {
 async function cleanImagesDir() {
 	const files = await readdir(imagesDir).catch(() => []);
 	for (const file of files) {
-		if (file.includes('valorant-cheats-logo')) continue;
-		if (file.includes('valorant-cheats-hero-home')) continue;
+		if (PROTECTED_PATTERNS.some((pattern) => pattern.test(file))) continue;
 		if (REMOVE_PATTERNS.some((pattern) => pattern.test(file))) {
 			await unlink(path.join(imagesDir, file));
 			console.log(`Removed ${file}`);
@@ -171,6 +175,15 @@ let heroBuffer = null;
 let saved = 0;
 
 for (const asset of KEYWORD_ASSETS) {
+	const pngName = asset.file.replace(/\.webp$/i, '.png');
+	try {
+		await access(path.join(imagesDir, pngName));
+		console.log(`Skip ${asset.file} — protected ${pngName} exists`);
+		continue;
+	} catch {
+		/* fetch remote fallback */
+	}
+
 	console.log(`Fetching ${asset.file} (${asset.overlay} overlay)`);
 	try {
 		const base = await fetchBase(asset.url);

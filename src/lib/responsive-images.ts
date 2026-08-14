@@ -39,9 +39,9 @@ export function contentSrcSet(baseSrc: string): string | undefined {
 	);
 }
 
-/** Homepage hero — single lossless PNG master (1536×1024). */
+/** Homepage hero — single lossless PNG master (1053×590). */
 export const heroResponsive: ResponsiveWidth[] = [
-	{ src: '/images/valorant-cheats-hero-home.png', width: 1536 },
+	{ src: '/images/valorant-cheats-hero-home.png', width: 1053 },
 ];
 
 export const heroDesktopResponsive: ResponsiveWidth[] = heroResponsive;
@@ -56,8 +56,8 @@ export const heroPreloadSrc = heroSrc;
 export const heroMimeType = 'image/png';
 
 /** Native dimensions of valorant-cheats-hero-home.png */
-export const heroWidth = 1536;
-export const heroHeight = 1024;
+export const heroWidth = 1053;
+export const heroHeight = 590;
 
 /** Responsive widths for below-fold content images. */
 export const contentWidths = [480, 960] as const;

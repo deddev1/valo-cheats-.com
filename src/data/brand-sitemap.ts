@@ -13,32 +13,32 @@ export type BrandSitemapImage = {
 
 const defaultImages: BrandSitemapImage[] = [
 	{
-		src: '/images/valorant-cheats-esp.webp',
+		src: '/images/valorant-cheats-esp.png',
 		title: 'valorant cheats esp',
 		caption: 'valorant cheats esp wallhack',
 	},
 	{
-		src: '/images/valorant-cheats-wallhack.webp',
+		src: '/images/valorant-cheats-wallhack.png',
 		title: 'valorant cheats wallhack',
 		caption: 'valorant cheats wallhack esp',
 	},
 	{
-		src: '/images/valorant-cheats-aimbot.webp',
+		src: '/images/valorant-cheats-aimbot.png',
 		title: 'valorant cheats aimbot',
 		caption: 'valorant cheats aimbot soft aim',
 	},
 	{
-		src: '/images/valorant-cheats-aimbot-view.webp',
+		src: '/images/valorant-cheats-aimbot-view.png',
 		title: 'valorant cheats aimbot',
 		caption: 'valorant cheats aimbot view',
 	},
 	{
-		src: '/images/valorant-cheats-radar.webp',
+		src: '/images/valorant-cheats-radar.png',
 		title: 'valorant cheats radar',
 		caption: 'valorant cheats radar hack',
 	},
 	{
-		src: '/images/valorant-cheats-match.webp',
+		src: '/images/valorant-cheats-match.png',
 		title: 'valorant cheats',
 		caption: 'valorant cheats in match',
 	},

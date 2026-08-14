@@ -96,7 +96,7 @@ const DEFAULT_SITEMAP_IMAGES = [
 		caption: 'Radar map in {primaryKeyword}',
 	},
 	{
-		src: '/images/valorant-cheats-combat.webp',
+		src: '/images/valorant-cheats-match.png',
 		title: '{primaryKeyword} in a fight',
 		caption: 'Fight view with {primaryKeyword}',
 	},
@@ -364,9 +364,9 @@ export function validateBrandPayload(body) {
 	const lifetime = price(b.lifetimePrice ?? b.lifetime);
 	const monthlyLabel = soft(b.monthlyLabel, 'Monthly', 40);
 	const lifetimeLabel = soft(b.lifetimeLabel, 'Lifetime', 40);
-	const logo = assetPath(b.logo ?? '/images/valorant-cheats-logo.webp');
+	const logo = assetPath(b.logo ?? '/images/valorant-cheats-logo.png');
 	const logoRaster = assetPath(b.logoRaster ?? '/images/valorant-cheats-logo.png');
-	const defaultOgImage = assetPath(b.defaultOgImage ?? '/images/valorant-cheats-combat.webp');
+	const defaultOgImage = assetPath(b.defaultOgImage ?? '/images/valorant-cheats-hero-home.png');
 	const heroImage = assetPath(b.heroImage ?? '/images/valorant-hero-banner.webp');
 	const logoAlt = soft(b.logoAlt, `${name || 'Brand'} logo`, 120);
 	const logoW = price(b.logoRasterWidth ?? 512) ?? 512;

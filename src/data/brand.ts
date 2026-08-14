@@ -20,7 +20,7 @@ export const brand = {
 	/** Anti-cheat name used in Status / FAQ copy */
 	antiCheat: 'Vanguard',
 
-	logo: '/images/valorant-cheats-logo.webp',
+	logo: '/images/valorant-cheats-logo.png',
 	logoRaster: '/images/valorant-cheats-logo.png',
 	logoRasterWidth: 512,
 	logoRasterHeight: 512,
@@ -134,32 +134,32 @@ export const brand = {
 		reviewsImageCaption: 'What buyers say about {primaryKeyword}',
 		images: [
 			{
-				src: '/images/valorant-cheats-esp.webp',
+				src: '/images/valorant-cheats-esp.png',
 				title: 'ESP overlay in Valorant',
 				caption: 'Player ESP boxes and distance readouts during a match',
 			},
 			{
-				src: '/images/valorant-cheats-wallhack.webp',
+				src: '/images/valorant-cheats-wallhack.png',
 				title: 'Wallhack visibility for Valorant matches',
 				caption: 'Agent and enemy outlines through walls and terrain',
 			},
 			{
-				src: '/images/valorant-cheats-aimbot.webp',
+				src: '/images/valorant-cheats-aimbot.png',
 				title: 'Soft aim assist for Valorant',
 				caption: 'Configurable soft aim FOV and bone priority',
 			},
 			{
-				src: '/images/valorant-cheats-aimbot-view.webp',
+				src: '/images/valorant-cheats-aimbot-view.png',
 				title: 'Aimbot view in Valorant Cheats',
 				caption: 'In-menu aimbot controls for Windows PC',
 			},
 			{
-				src: '/images/valorant-cheats-radar.webp',
+				src: '/images/valorant-cheats-radar.png',
 				title: '2D radar threat overlay',
 				caption: 'Radar cues for flanks near sites',
 			},
 			{
-				src: '/images/valorant-cheats-match.webp',
+				src: '/images/valorant-cheats-match.png',
 				title: 'Valorant Cheats license plans',
 				caption: 'Monthly and lifetime plans for Windows PC',
 			},

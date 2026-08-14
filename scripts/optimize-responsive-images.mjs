@@ -13,7 +13,8 @@ const CONTENT_WIDTHS = [480, 960];
 const SKIP_PATTERNS = [
 	/-\d+w\.webp$/i,
 	/valorant-cheats-logo/i,
-	/valorant-cheats-hero-home/i,
+	/valorant-cheats-hero/i,
+	/valorant-cheats-(esp|wallhack|aimbot|aimbot-view|radar|match|gameplay)\.png$/i,
 	/favicon/i,
 ];
 

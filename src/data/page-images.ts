@@ -10,12 +10,12 @@ export const crawlPhotoPool = [
 	valorantImages.aimbotSkeleton,
 	valorantImages.playerEsp,
 	valorantImages.cheatsCombat,
-	'/images/valorant-cheats-esp.webp',
+	'/images/valorant-cheats-esp.png',
 ] as const;
 
 /**
  * One primary crawl/OG photo per product page.
- * Prefer compressed WebP screenshots so Google can fetch them quickly.
+ * Uses local PNG screenshots from /public/images/.
  */
 export const pageImageSrcById: Record<PageId, string> = {
 	home: '/images/valorant-cheats-hero-home.png',
