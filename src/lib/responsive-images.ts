@@ -47,7 +47,7 @@ export const heroResponsive: ResponsiveWidth[] = [
 export const heroWebpResponsive: ResponsiveWidth[] = [
 	{ src: '/images/valorant-cheats-hero-home-640w.webp', width: 640 },
 	{ src: '/images/valorant-cheats-hero-home-960w.webp', width: 960 },
-	{ src: '/images/valorant-cheats-hero-home.png', width: 1280 },
+	{ src: '/images/valorant-cheats-hero-home-1280w.webp', width: 1280 },
 ];
 
 export const heroDesktopResponsive: ResponsiveWidth[] = heroResponsive;

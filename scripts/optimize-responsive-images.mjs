@@ -32,8 +32,8 @@ async function optimizeHero() {
 	results.push({ file: 'valorant-cheats-hero-home.png', bytes: recompressed.length });
 	console.log(`Recompressed hero PNG (${meta.width}x${meta.height}) → ${recompressed.length} bytes`);
 
-	for (const width of [640, 960, 1400]) {
-		if (meta.width && width >= meta.width) continue;
+	for (const width of [640, 960, 1280]) {
+		if (meta.width && width > meta.width) continue;
 		const variant = `valorant-cheats-hero-home-${width}w.webp`;
 		const dest = path.join(imagesDir, variant);
 		const buffer = await sharp(source)
