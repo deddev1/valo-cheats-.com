@@ -64,7 +64,7 @@ const extraGraph: Record<string, unknown>[] = [
 			description: productInfo.summary,
 			image: photo.url,
 			brand: { '@type': 'Brand', name: productInfo.brand },
-			url: `${siteConfig.url}/`,
+			url: new URL('/valorant-cheats/', siteConfig.url).href,
 			offers: {
 				'@type': 'AggregateOffer',
 				lowPrice: Math.min(...offerPrices).toFixed(2),

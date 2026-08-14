@@ -18,6 +18,14 @@ const PATH_REDIRECTS = {
 	// Exact-match keyword → pillar (not homepage)
 	'/escape-from-valorant-cheats': '/valorant-cheats/',
 	'/escape-from-valorant-cheats/': '/valorant-cheats/',
+	'/blog/escape-from-valorant-cheats-buyers-guide': '/blog/valorant-cheats-buyers-guide/',
+	'/blog/escape-from-valorant-cheats-buyers-guide/': '/blog/valorant-cheats-buyers-guide/',
+	'/faq/pmc-matches-and-deathmatchs': '/faq/unrated-and-competitive/',
+	'/faq/pmc-matches-and-deathmatchs/': '/faq/unrated-and-competitive/',
+	'/faq/pmc-raids-and-scav-runs': '/faq/unrated-and-competitive/',
+	'/faq/pmc-raids-and-scav-runs/': '/faq/unrated-and-competitive/',
+	'/reviews/valorant-radar-hack-review-vanlifeeft': '/reviews/valorant-radar-hack-review-vanlifeval/',
+	'/reviews/valorant-radar-hack-review-vanlifeeft/': '/reviews/valorant-radar-hack-review-vanlifeval/',
 	// Cannibalization → canonical landings (money URL = /valorant-cheats/)
 	'/valorant-esp-hack': '/valorant-esp/',
 	'/valorant-esp-hack/': '/valorant-esp/',
@@ -79,10 +87,10 @@ const PATH_REDIRECTS = {
 	'/blog/creative-warmup-maps-pros-use/': '/blog/valorant-warmup-maps-ranked/',
 	'/reviews/valorant-esp-zero-build-review-buildsr4k': '/reviews/valorant-esp-deathmatch-review-buildsr4k/',
 	'/reviews/valorant-esp-zero-build-review-buildsr4k/': '/reviews/valorant-esp-deathmatch-review-buildsr4k/',
-	'/reviews/valorant-radar-hack-review-vanlifefn': '/reviews/valorant-radar-hack-review-vanlifeeft/',
-	'/reviews/valorant-radar-hack-review-vanlifefn/': '/reviews/valorant-radar-hack-review-vanlifeeft/',
-	'/reviews/valorant-radar-hack-review-vanlifewz': '/reviews/valorant-radar-hack-review-vanlifeeft/',
-	'/reviews/valorant-radar-hack-review-vanlifewz/': '/reviews/valorant-radar-hack-review-vanlifeeft/',
+	'/reviews/valorant-radar-hack-review-vanlifefn': '/reviews/valorant-radar-hack-review-vanlifeval/',
+	'/reviews/valorant-radar-hack-review-vanlifefn/': '/reviews/valorant-radar-hack-review-vanlifeval/',
+	'/reviews/valorant-radar-hack-review-vanlifewz': '/reviews/valorant-radar-hack-review-vanlifeval/',
+	'/reviews/valorant-radar-hack-review-vanlifewz/': '/reviews/valorant-radar-hack-review-vanlifeval/',
 	'/reviews/valorant-controller-soft-aim-review-ctrl-player99': '/reviews/valorant-soft-aim-review-ctrl-player99/',
 	'/reviews/valorant-controller-soft-aim-review-ctrl-player99/': '/reviews/valorant-soft-aim-review-ctrl-player99/',
 };
@@ -165,6 +173,43 @@ function trailingSlashRedirect(pathname) {
 	return `${pathname}/`;
 }
 
+/** Leftover Tarkov / doorway slugs still in GSC → final Valorant canonicals (no redirect chains). */
+function legacyValorantPath(pathname) {
+	if (
+		!pathname.includes('tarkov') &&
+		!pathname.includes('escape-from-valorant-cheats') &&
+		!pathname.includes('battleye')
+	) {
+		return null;
+	}
+	let next = pathname
+		.replaceAll('escape-from-valorant-cheats', 'valorant-cheats')
+		.replaceAll('escape-from-tarkov-cheats', 'valorant-cheats')
+		.replaceAll('/undetected-tarkov-cheats', '/valorant-cheats')
+		.replaceAll('/best-tarkov-cheats', '/valorant-cheats')
+		.replaceAll('/tarkov-cheats-2026', '/valorant-cheats')
+		.replaceAll('/tarkov-cheat-download', '/setup')
+		.replaceAll('/tarkov-aimbot-hack', '/valorant-aimbot')
+		.replaceAll('/tarkov-esp-hack', '/valorant-esp')
+		.replaceAll('/tarkov-radar-hack', '/valorant-radar-hack')
+		.replaceAll('/tarkov-wallhack', '/valorant-esp')
+		.replaceAll('/tarkov-soft-aim', '/valorant-aimbot')
+		.replaceAll('/tarkov-mod-menu', '/valorant-cheats')
+		.replaceAll('/tarkov-unlock-all', '/valorant-cheats')
+		.replaceAll('/tarkov-aimbot', '/valorant-aimbot')
+		.replaceAll('/tarkov-esp', '/valorant-esp')
+		.replaceAll('/tarkov-cheats', '/valorant-cheats')
+		.replaceAll('/battleye-bypass', '/updates')
+		.replaceAll('tarkov', 'valorant');
+	if (PATH_REDIRECTS[next]) next = PATH_REDIRECTS[next];
+	else if (PATH_REDIRECTS[`${next}/`]) next = PATH_REDIRECTS[`${next}/`];
+	else if (CANNIBAL_REDIRECTS[next]) next = CANNIBAL_REDIRECTS[next];
+	else if (CANNIBAL_REDIRECTS[`${next}/`]) next = CANNIBAL_REDIRECTS[`${next}/`];
+	if (next === pathname) return null;
+	if (!next.endsWith('/') && !next.includes('.')) next += '/';
+	return next;
+}
+
 export async function onRequest(context) {
 	const url = new URL(context.request.url);
 	const host = url.hostname.toLowerCase();
@@ -191,6 +236,7 @@ export async function onRequest(context) {
 	const pathRedirect =
 		PATH_REDIRECTS[url.pathname] ??
 		CANNIBAL_REDIRECTS[url.pathname] ??
+		legacyValorantPath(url.pathname) ??
 		xmlTrailingSlashRedirect(url.pathname) ??
 		trailingSlashRedirect(url.pathname);
 	if (pathRedirect) {

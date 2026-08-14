@@ -19,9 +19,9 @@ export type PageSitemapMeta = {
  * pages to the same date on deploy, only bump pages whose content was edited.
  */
 export const pageSitemapMeta: Record<PageId, PageSitemapMeta> = {
-	home: { priority: 0.95, changefreq: 'daily', i18nPriority: 0.88, lastmod: '2026-08-13' },
+	home: { priority: 0.95, changefreq: 'daily', i18nPriority: 0.88, lastmod: '2026-08-14' },
 	/** Money URL for "valorant cheats" */
-	hacks: { priority: 1.0, changefreq: 'weekly', i18nPriority: 0.9, lastmod: '2026-08-13' },
+	hacks: { priority: 1.0, changefreq: 'weekly', i18nPriority: 0.9, lastmod: '2026-08-14' },
 	undetected: { priority: 0.3, changefreq: 'yearly', i18nPriority: 0.2, lastmod: '2026-08-13' },
 	'cheats-2026': { priority: 0.3, changefreq: 'yearly', i18nPriority: 0.2, lastmod: '2026-08-13' },
 	'cheat-download': { priority: 0.3, changefreq: 'yearly', i18nPriority: 0.2, lastmod: '2026-08-13' },

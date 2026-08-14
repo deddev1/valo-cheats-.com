@@ -92,7 +92,7 @@ export const enPages = {
 			section(
 				'Aimbot tuned for Valorant combat pace',
 				'Valorant mixes long-range AR fights with close-quarters SMG pushes. Valorant Cheats Aimbot includes smoothness, FOV, and sensitivity controls tuned for that pace — with hotkey toggles mid-match.',
-				'Bone priority and target selection options cover closest player, lowest health, or highest-threat targets during squad fights and close-range scav fights.',
+				'Bone priority and target selection options cover closest player, lowest health, or highest-threat targets during squad fights and close-range site fights.',
 				`Weapon balance and season rules change via ${EXT.valorant}. Revisit Aimbot FOV and smoothness after major combat patches so assist still matches the live TTK windows.`,
 			),
 			section(
@@ -507,7 +507,7 @@ export const enPages = {
 				'How this Valorant cheats pillar fits nearby pages',
 				'Use this pillar for the core product overview. For year-specific buying notes, see the <a href="/valorant-cheats/">valorant cheats 2026</a> and <a href="/valorant-cheats/">Valorant cheats</a> pages cover buyer comparisons in cheats wording.',
 				'Deep-dive modules: <a href="/valorant-esp/">Valorant ESP</a>, <a href="/valorant-aimbot/">Valorant Aimbot</a>, <a href="/valorant-esp/">wallhack</a>, <a href="/valorant-radar-hack/">radar hack</a>, and <a href="/valorant-aimbot/">soft aim</a>.',
-				'Blog guides expand Vanguard keyword: <a href="/blog/valorant-cheats-complete-guide-2026/">hacks complete guide</a>, <a href="/blog/escape-from-valorant-cheats-buyers-guide/">cheats buyers guide</a>, and <a href="/blog/undetected-valorant-cheats-vanguard/">undetected Vanguard notes</a>.',
+				'Blog guides expand Vanguard keyword: <a href="/blog/valorant-cheats-complete-guide-2026/">hacks complete guide</a>, <a href="/blog/valorant-cheats-buyers-guide/">cheats buyers guide</a>, and <a href="/blog/undetected-valorant-cheats-vanguard/">undetected Vanguard notes</a>.',
 			),
 			section(
 				'Valorant cheats vs single-feature tools',

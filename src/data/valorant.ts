@@ -18,8 +18,8 @@ export const valorantImages = {
 	battleRoyaleCombat: '/images/valorant-cheats-match.webp',
 	siteFight: '/images/valorant-cheats-aimbot.webp',
 	rebootFight: '/images/valorant-cheats-aimbot.webp',
-	scavRunCombat: '/images/valorant-cheats-wallhack.webp',
-	scavRunMode: '/images/valorant-cheats-esp.webp',
+	deathmatchCombat: '/images/valorant-cheats-wallhack.webp',
+	deathmatchMode: '/images/valorant-cheats-esp.webp',
 	battleRoyaleIsland: '/images/valorant-cheats-esp.webp',
 	matchMap: '/images/valorant-cheats-esp.webp',
 	product: [

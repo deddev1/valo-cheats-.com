@@ -81,10 +81,10 @@ export const brand = {
 			'Everything in one {game} license for Windows PC — ESP, soft aim, radar, spike tools, and patch updates after {antiCheat}. See what is included.',
 		storeTitle: '{game} Store | {brand}',
 		storeDescription:
-			'Monthly and lifetime {game} plans for Windows PC. Same ESP, aimbot, and radar features on both. Instant delivery after payment checkout.',
+			'Monthly and lifetime {game} plans for Windows PC. Same ESP, aimbot, and radar features on both. Instant delivery after you pay at checkout.',
 		statusTitle: '{game} Status | {brand}',
 		statusDescription:
-			'Live undetected status for {brand} after {game} or {antiCheat} patches. Check here before you queue on Windows PC today.',
+			'Live undetected status for {brand} after {game} or {antiCheat} patches. Check here before you queue on Windows PC so you play on a current build.',
 		/** Money page meta — primary target for "valorant cheats". */
 		previewTitle: 'Valorant Cheats | Undetected ESP & Aimbot',
 		previewDescription:
@@ -97,13 +97,13 @@ export const brand = {
 			'Get help with {brand} on Windows PC. Email {email} with your order ID for setup, delivery, or billing help after you buy.',
 		faqTitle: '{game} FAQ | {brand}',
 		faqDescription:
-			'Short answers about {brand} for Valorant — delivery, setup, {antiCheat} updates, refunds, and Windows PC system notes before you buy.',
+			'Short answers about {brand} for Valorant — delivery, setup, {antiCheat} updates, refunds, and Windows PC system notes before you buy a license.',
 		reviewsTitle: '{brand} Reviews | Buyer Feedback',
 		reviewsDescription:
-			'Buyer reviews for {brand} — ESP, soft aim, radar, and patch updates for Valorant on Windows PC. Real feedback from license holders.',
+			'Buyer reviews for {brand} — ESP, soft aim, radar, and patch updates for Valorant on Windows PC. Real feedback from license holders who play.',
 		blogTitle: '{game} Intel | {brand}',
 		blogDescription:
-			'Guides and notes for {game} — ranked tips, ESP, aimbot, map control, and {antiCheat} update coverage for Windows PC players who queue.',
+			'Guides and notes for {game} — ranked tips, ESP, aimbot, map control, and {antiCheat} update coverage for Windows PC players who queue to play.',
 	},
 
 	/** On-page marketing copy (tokens allowed) */
@@ -142,7 +142,7 @@ export const brand = {
 	 */
 	sitemap: {
 		/** YYYY-MM-DD — Brand Studio can bump this on save to refresh crawl dates */
-		contentLastmod: '2026-08-13',
+		contentLastmod: '2026-08-14',
 		blogImageTitle: '{brand} blog',
 		blogImageCaption: 'Tips and updates for {primaryKeyword}',
 		reviewsImageTitle: '{brand} reviews',
@@ -156,7 +156,7 @@ export const brand = {
 			{
 				src: '/images/valorant-cheats-wallhack.webp',
 				title: 'Wallhack visibility for Valorant matches',
-				caption: 'agent and enemy outlines through walls and terrain',
+				caption: 'Agent and enemy outlines through walls and terrain',
 			},
 			{
 				src: '/images/valorant-cheats-aimbot.webp',

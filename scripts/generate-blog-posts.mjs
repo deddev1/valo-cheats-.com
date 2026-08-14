@@ -17,7 +17,7 @@ const EXT = {
 	valorant:
 		'<a href="https://playvalorant.com/" target="_blank" rel="noopener noreferrer">Valorant</a>',
 	status:
-		'<a href="https://playvalorant.com/en-us/news//" target="_blank" rel="noopener noreferrer">Valorant Support</a>',
+		'<a href="https://playvalorant.com/en-us/news/" target="_blank" rel="noopener noreferrer">Valorant Support</a>',
 	vanguard:
 		'<a href="https://playvalorant.com/en-us/news/tags/patch-notes/" target="_blank" rel="noopener noreferrer">Vanguard</a>',
 };
@@ -48,7 +48,7 @@ const sources = [
 			'agent loadout',
 			'valorant intel',
 		],
-		imageAlt: 'Player reviewing Valorant patch notes before a agent match',
+		imageAlt: 'Player reviewing Valorant patch notes before an agent match',
 		sections: [
 			{
 				h2: 'What actually matters in a Valorant patch?',
@@ -88,7 +88,7 @@ const sources = [
 			'Sensible advice on Valorant cosmetics and skin leaks — what to buy on the Flea Market, what to skip, and how looks affect match readability.',
 		h1: 'Valorant Cosmetics and Skin Leaks: Buy Smart, Not Impulsive',
 		intro:
-			'Leaks make every episode feel like a fashion drop. Before you dump roubles into another loud outfit, decide whether the skin helps you play Valorant — or just looks cool in a screenshot.',
+			'Leaks make every episode feel like a fashion drop. Before you dump leftover VP into another loud outfit, decide whether the skin helps you play Valorant — or just looks cool in a screenshot.',
 		keywords: [
 			'valorant skins',
 			'valorant cosmetics',
@@ -101,14 +101,14 @@ const sources = [
 			{
 				h2: 'Why most impulse cosmetic buys feel bad after a week',
 				paragraphs: [
-					`Shop rotations and official apparel come from ${EXT.valorant}. Leaks are entertainment, not a shopping list. Many players spend hard-earned flea money the night before a episode, then realize they still need meds, ammo, and a backup kit.`,
+					`Shop rotations and official apparel come from ${EXT.valorant}. Leaks are entertainment, not a shopping list. Many players spend leftover VP the night before an episode, then realize they still need utility, ammo, and a backup rifle.`,
 					'Controversial but useful: most cosmetics do not raise your survival rate. Some loud patterns even make you easier to spot in bushes on Breeze or in dark Sunset hallways. Pros often prefer quieter silhouettes so enemy outlines stay readable in chaotic peeks.',
 				],
 			},
 			{
 				h2: 'A simple worth-it checklist for Valorant cosmetics',
 				paragraphs: [
-					'Buy if you will still wear it in ninety days and it stays readable in night matches. Pause if it overlaps three outfits you already own. Skip FOMO bundles packed with fillers you will never equip. Always keep a rouble floor for ammo and healing before fashion.',
+					'Buy if you will still wear it in ninety days and it stays readable in night matches. Pause if it overlaps three outfits you already own. Skip FOMO bundles packed with fillers you will never equip. Always keep credits for armor and utility before fashion.',
 					'Do the math on bundles. Paying extra for two fillers you hate is worse than waiting for a single piece on the Flea Market. If a leak only hypes one jacket, wait for confirmation instead of panic-buying a full set.',
 				],
 			},
@@ -142,7 +142,7 @@ const sources = [
 			'm4a1 valorant',
 			'valorant intel',
 		],
-		imageAlt: 'Valorant weapons laid out for a agent loadout comparison',
+		imageAlt: 'Valorant weapons laid out for an agent loadout comparison',
 		sections: [
 			{
 				h2: 'How should you define S-tier in Valorant?',
@@ -185,7 +185,7 @@ const sources = [
 		keywords: [
 			'valorant deathmatch',
 			'deathmatch strategies',
-			'valorant scav',
+			'valorant deathmatch',
 			'valorant sites',
 			'valorant esp',
 		],
@@ -194,7 +194,7 @@ const sources = [
 			{
 				h2: 'Why so many Deathmatch games feel soft',
 				paragraphs: [
-					'Deathmatch kits are random, timers are limited, and player enemies can turn on you. Waiting forever for a “perfect” third-party often means you arrive late to a episoded lobby with nothing left. Information tools like <a href="/valorant-esp/">Valorant ESP</a> can help you see fights early — but you still need an exit plan.',
+					'Deathmatch kits are random, timers are limited, and player enemies can turn on you. Waiting forever for a “perfect” third-party often means you arrive late to a cleared site with nothing left. Information tools like <a href="/valorant-esp/">Valorant ESP</a> can help you see fights early — but you still need an exit plan.',
 					'Decide your site before you swing. Take a clear damage window, grab high-value loot, then leave. The usual third-party clock in hot POIs is only a few seconds long once gunfire starts.',
 				],
 			},
@@ -232,7 +232,7 @@ const sources = [
 			'valorant competitive',
 			'valorant tournament',
 			'valorant meta',
-			'pmc habits',
+			'ranked habits',
 			'valorant intel',
 		],
 		imageAlt: 'Competitive Valorant players reviewing match strategy',
@@ -276,8 +276,8 @@ const sources = [
 			'Winning in Valorant starts before the first gunfight. Random looting gets you killed with a pistol and no meds. These route habits consistently convert a spawn into a kit you can actually fight with.',
 		keywords: [
 			'valorant loot routes',
-			'customs loot path',
-			'interchange loot',
+			'ascent site take',
+			'haven executes',
 			'valorant spawn guide',
 			'valorant esp',
 		],
@@ -346,7 +346,7 @@ const sources = [
 			{
 				h2: 'Audio cues that win sites',
 				paragraphs: [
-					'Footsteps, magazine reloads, and site buzzing often matter more than a tiny graphics slider. Use headphones, keep voice chat from drowning game audio, and learn the sound difference between a scav AI shuffle and a player agent push.',
+					'Footsteps, magazine reloads, and site buzzing often matter more than a tiny graphics slider. Use headphones, keep voice chat from drowning game audio, and learn the sound difference between an ability cue and a player agent push.',
 					'Settings are leverage, not a cheat code. Pair them with map knowledge from our <a href="/blog/valorant-loot-routes-guide/">loot routes</a> article so you know where those sounds are coming from.',
 				],
 			},
@@ -369,7 +369,7 @@ const sources = [
 		keywords: [
 			'valorant warmup',
 			'valorant aim practice',
-			'pmc warmup routine',
+			'agent warmup routine',
 			'valorant offline practice',
 			'valorant intel',
 		],
@@ -392,7 +392,7 @@ const sources = [
 			{
 				h2: 'What to do right before you ready up',
 				paragraphs: [
-					'Check stash meds and ammo, confirm your map sites, and skim <a href="/updates/">cheat status</a> if you use overlays after a patch. Pair warmup with <a href="/blog/valorant-pro-settings-guide/">settings</a> and <a href="/blog/valorant-weapon-tier-list/">weapon tiers</a> so you are not reinventing the kit every night.',
+					'Check utility and ammo, confirm your map sites, and skim <a href="/updates/">cheat status</a> if you use overlays after a patch. Pair warmup with <a href="/blog/valorant-pro-settings-guide/">settings</a> and <a href="/blog/valorant-weapon-tier-list/">weapon tiers</a> so you are not reinventing the kit every night.',
 					'If the first two agent deaths feel mechanical, stop stacking kits and repeat five minutes of peek practice. Ego queueing while tilted is not a strategy.',
 				],
 			},
@@ -425,40 +425,40 @@ const sources = [
 				h2: 'What do people mean when they say valorant cheats?',
 				paragraphs: [
 					'In plain language, valorant cheats are third-party tools that add information or aim assistance on top of the Valorant client. The common stack is ESP wallhack for players and loot, a 2D radar for threats outside your view, and configurable soft aim for firefights. One license should cover that loop instead of forcing you to juggle separate downloads.',
-					'Searchers also say “valorant hacks,” “valorant hacks,” or “valorant wallhack.” Those phrases usually point at the same intent: survive matches with better reads. Start at our <a href="/valorant-cheats/">valorant cheats pillar</a> if you want the product overview without the long essay.',
+					'Searchers also say “valorant hacks,” “valorant wallhack,” or “undetected valorant cheats.” Those phrases usually point at the same intent: survive matches with better reads. Start at our <a href="/valorant-cheats/">valorant cheats pillar</a> if you want the product overview without the long essay.',
 				],
 			},
 			{
 				h2: 'ESP, soft aim, and radar — what each tool is for',
 				paragraphs: [
 					'ESP answers “who is near me and what is worth looting?” Soft aim answers “can I finish the fight once I choose it?” Radar answers “is someone flanking while I heal?” Used together, they cover information and combat. Used badly, they create noisy overlays and obvious aim corrections.',
-					'Deep dives live on <a href="/valorant-esp/">ESP</a>, <a href="/valorant-aimbot/">aimbot</a>, <a href="/valorant-wallhack/">wallhack</a>, and <a href="/valorant-radar-hack/">radar</a>. Read those before you buy if you only need one job done well.',
+					'Deep dives live on <a href="/valorant-esp/">ESP</a>, <a href="/valorant-aimbot/">aimbot</a>, <a href="/valorant-esp/">wallhack</a>, and <a href="/valorant-radar-hack/">radar</a>. Read those before you buy if you only need one job done well.',
 				],
 			},
 			{
 				h2: 'Vanguard, “undetected,” and honest expectations',
 				paragraphs: [
-					`${EXT.vanguard} protects Valorant. No seller can promise permanent undetected status. What a serious vendor can offer is maintenance: rebuilds after patches, a public status note, and clear setup steps. That workflow is documented on <a href="/undetected-valorant-cheats/">undetected valorant cheats</a> and <a href="/vanguard-bypass/">Vanguard maintenance</a>.`,
+					`${EXT.vanguard} protects Valorant. No seller can promise permanent undetected status. What a serious vendor can offer is maintenance: rebuilds after patches, a public status note, and clear setup steps. That workflow is documented on <a href="/valorant-cheats/">undetected valorant cheats</a> and <a href="/updates/">Vanguard maintenance</a>.`,
 					'Before every patch-day queue, read <a href="/updates/">Updates</a>. If status is quiet, wait. Responsible settings matter as much as the binary itself.',
 				],
 			},
 			{
 				h2: 'How to buy and set up without wasting a night',
 				paragraphs: [
-					'Compare monthly and lifetime on <a href="/pricing/">Pricing</a>, then follow <a href="/setup/">Setup</a> after delivery. Keep your order ID ready for <a href="/support/">Support</a>. If you are still shopping, the <a href="/blog/escape-from-valorant-cheats-buyers-guide/">buyers guide</a> lists the checklist we wish every shopper used.',
+					'Compare monthly and lifetime on <a href="/pricing/">Pricing</a>, then follow <a href="/setup/">Setup</a> after delivery. Keep your order ID ready for <a href="/support/">Support</a>. If you are still shopping, the <a href="/blog/valorant-cheats-buyers-guide/">buyers guide</a> lists the checklist we wish every shopper used.',
 					'Valorant Cheats is built for Windows PC agent and enemy play. It will not replace map knowledge — it amplifies the reads you already practice in matches.',
 				],
 			},
 		],
 	},
 	{
-		id: 'escape-from-valorant-cheats-buyers-guide',
+		id: 'valorant-cheats-buyers-guide',
 		imageKey: 'cheatsPackage',
 		published: '2026-07-28',
 		updated: '2026-08-13',
 		category: 'Buyers Guide',
 		featured: true,
-		slug: 'escape-from-valorant-cheats-buyers-guide',
+		slug: 'valorant-cheats-buyers-guide',
 		title: 'Valorant Cheats Buyers Guide',
 		metaDescription:
 			'What to check before you buy valorant hacks — status pages, ESP features, soft aim, refunds, pricing, and red flags in 2026.',
@@ -513,7 +513,7 @@ const sources = [
 			'2026 did not invent cheating in Valorant — it raised the bar for maintenance. Wipes, Vanguard pushes, and map updates punish stale builds. Here is what changed in how serious valorant cheats packages need to operate.',
 		keywords: [
 			'valorant cheats 2026',
-			'eft cheats 2026',
+			'valorant cheats 2026',
 			'vanguard 2026',
 			'valorant episode',
 			'valorant cheats updates',
@@ -523,7 +523,7 @@ const sources = [
 			{
 				h2: 'Why 2026 buyers care more about status pages',
 				paragraphs: [
-					'Players got tired of “undetected forever” slogans. They want a dated note after patches. That is why we invest in the <a href="/updates/">Updates</a> log and the <a href="/undetected-valorant-cheats/">undetected explainer</a> instead of empty guarantees.',
+					'Players got tired of “undetected forever” slogans. They want a dated note after patches. That is why we invest in the <a href="/updates/">Updates</a> log and the <a href="/valorant-cheats/">undetected explainer</a> instead of empty guarantees.',
 					`${EXT.vanguard} and Riot Games client updates still force rebuilds. The shops that survive are the ones that communicate during those windows.`,
 				],
 			},
@@ -570,7 +570,7 @@ const sources = [
 				h2: 'Start softer than you think you need',
 				paragraphs: [
 					'Begin with a smaller FOV and higher smoothness so the assist helps tracking instead of snapping. Play five matches on Ascent or Icebox and only then widen FOV. If friends watching a demo say it looks robotic, you went too far.',
-					'Full control docs live on <a href="/valorant-aimbot/">Valorant Aimbot</a> and <a href="/valorant-soft-aim/">soft aim</a>.',
+					'Full control docs live on <a href="/valorant-aimbot/">Valorant Aimbot</a> and <a href="/valorant-aimbot/">soft aim</a>.',
 				],
 			},
 			{
@@ -605,7 +605,7 @@ const sources = [
 		keywords: [
 			'valorant esp',
 			'valorant wallhack',
-			'eft esp',
+			'valorant esp',
 			'loot esp valorant',
 			'valorant cheats',
 		],
@@ -615,7 +615,7 @@ const sources = [
 				h2: 'What ESP shows during a real match',
 				paragraphs: [
 					'Player ESP outlines agents and enemies through walls and terrain, often with distance. Orb ESP highlights containers or high-value items. Extract cues help you avoid camping surprises. That information gap is why people search for valorant esp in the first place.',
-					'Read the dedicated pages for <a href="/valorant-esp/">ESP</a> and <a href="/valorant-wallhack/">wallhack</a> if you want category-level detail.',
+					'Read the dedicated pages for <a href="/valorant-esp/">ESP</a> and <a href="/valorant-esp/">wallhack</a> if you want category-level detail.',
 				],
 			},
 			{
@@ -628,7 +628,7 @@ const sources = [
 			{
 				h2: 'Maintenance and responsible use',
 				paragraphs: [
-					'ESP modules rebuild after Vanguard patches like everything else. Check <a href="/updates/">Updates</a> and the <a href="/undetected-valorant-cheats/">undetected guide</a>. No overlay replaces listening and map knowledge — it shortens the time between “I heard something” and “I know where.”',
+					'ESP modules rebuild after Vanguard patches like everything else. Check <a href="/updates/">Updates</a> and the <a href="/valorant-cheats/">undetected guide</a>. No overlay replaces listening and map knowledge — it shortens the time between “I heard something” and “I know where.”',
 				],
 			},
 		],
@@ -651,7 +651,7 @@ const sources = [
 			'undetected valorant cheats',
 			'vanguard valorant',
 			'valorant ban risk',
-			'eft undetected',
+			'valorant undetected',
 			'valorant status',
 		],
 		imageAlt: 'Vanguard maintenance status for undetected Valorant cheats',
@@ -659,7 +659,7 @@ const sources = [
 			{
 				h2: 'What undetected can honestly mean',
 				paragraphs: [
-					`Vanguard is documented at ${EXT.vanguard}. It evolves. Vendors who care publish rebuild notes when ESP, radar, or aim modules need work. Valorant Cheats does that on <a href="/updates/">Updates</a> and explains the workflow on <a href="/vanguard-bypass/">Vanguard maintenance</a>.`,
+					`Vanguard is documented at ${EXT.vanguard}. It evolves. Vendors who care publish rebuild notes when ESP, radar, or aim modules need work. Valorant Cheats does that on <a href="/updates/">Updates</a> and explains the workflow on <a href="/updates/">Vanguard maintenance</a>.`,
 					'If a seller says “100% undetected forever,” treat it as advertising. Your risk also depends on how obviously you play.',
 				],
 			},
@@ -673,7 +673,7 @@ const sources = [
 			{
 				h2: 'Where to go next',
 				paragraphs: [
-					'Read <a href="/undetected-valorant-cheats/">undetected valorant cheats</a>, the <a href="/blog/valorant-cheats-complete-guide-2026/">2026 complete guide</a>, and <a href="/pricing/">Pricing</a> if you want the maintained stack. Undetected status is a process you check — not a sticker on the box.',
+					'Read <a href="/valorant-cheats/">undetected valorant cheats</a>, the <a href="/blog/valorant-cheats-complete-guide-2026/">2026 complete guide</a>, and <a href="/pricing/">Pricing</a> if you want the maintained stack. Undetected status is a process you check — not a sticker on the box.',
 				],
 			},
 		],
@@ -694,12 +694,12 @@ const sources = [
 			'Budget Valorant stores often look identical: neon banners, “undetected” badges, and a low weekly price. Valorant Cheats costs more than the cheapest tier on purpose. Here is what you usually trade when you chase the lowest sticker.',
 		keywords: [
 			'valorant cheats comparison',
-			'budget eft cheats',
+			'budget valorant cheats',
 			'valorant cheats vs other shops',
 			'esp radar pricing',
 			'valorant cheats',
 		],
-		imageAlt: 'Comparing Valorant Cheats features against budget EFT cheat shops',
+		imageAlt: 'Comparing Valorant Cheats features against budget Valorant cheat shops',
 		sections: [
 			{
 				h2: 'What budget shops usually optimize for',
@@ -712,14 +712,14 @@ const sources = [
 				h2: 'Price versus what you touch every match',
 				paragraphs: [
 					'If you only want basic player boxes in casual matches, a cheaper shop might feel enough. If you hold sites, run loot routes, and hate dying to unseen flanks, radar and clean filters pay for themselves quickly.',
-					'Our monthly and lifetime options are on <a href="/pricing/">Pricing</a>. Read the <a href="/blog/escape-from-valorant-cheats-buyers-guide/">buyers guide</a> before you compare three storefronts at once.',
+					'Our monthly and lifetime options are on <a href="/pricing/">Pricing</a>. Read the <a href="/blog/valorant-cheats-buyers-guide/">buyers guide</a> before you compare three storefronts at once.',
 				],
 			},
 			{
 				h2: 'How to decide without brand loyalty',
 				paragraphs: [
 					'Write down must-haves: dated status, loot ESP, radar, soft aim profiles, Windows PC support. Open each seller’s status channel and feature list side by side. If a shop fails the status test, price does not matter.',
-					'Then return to <a href="/valorant-cheats/">valorant cheats</a> and <a href="/undetected-valorant-cheats/">undetected notes</a> if that checklist matches what we ship.',
+					'Then return to <a href="/valorant-cheats/">valorant cheats</a> and <a href="/valorant-cheats/">undetected notes</a> if that checklist matches what we ship.',
 				],
 			},
 		],
@@ -740,7 +740,7 @@ const sources = [
 			'My Discord kept recommending a popular Valorant cheat brand. I gave it fourteen days on the same PC and playlists, then moved to Valorant Cheats. This is what actually differed — without the usual affiliate script.',
 		keywords: [
 			'valorant cheats review',
-			'eft cheat comparison',
+			'valorant cheat comparison',
 			'valorant cheat downtime',
 			'soft aim test',
 			'valorant cheats',
@@ -818,7 +818,7 @@ const sources = [
 				h2: 'Detection talk without fairy tales',
 				paragraphs: [
 					'Smaller user bases generate fewer public ban screenshots — that is not proof of safety. Larger brands generate more noise even when maintenance is solid. Judge sellers by patch communication speed and whether you can find a dated status note.',
-					'Valorant Cheats documents maintenance on <a href="/vanguard-bypass/">Vanguard workflow</a> and <a href="/undetected-valorant-cheats/">undetected notes</a>.',
+					'Valorant Cheats documents maintenance on <a href="/updates/">Vanguard workflow</a> and <a href="/valorant-cheats/">undetected notes</a>.',
 				],
 			},
 			{

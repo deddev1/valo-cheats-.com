@@ -54,7 +54,7 @@ const replacements = [
 	['final-circle scrims', 'site camp fights'],
 	['before your first ranked block', 'before your first match'],
 	['before ranked', 'before you queue'],
-	['reboot rounds', 'close-range scav fights'],
+	['reboot rounds', 'close-range site fights'],
 	['Battle Pass', 'episode progression'],
 	[
 		'long-range AR beams and close-quarters room clears without reopening menus every spawn',

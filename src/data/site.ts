@@ -294,7 +294,7 @@ export const customerReviews = [
 		rating: 5,
 		text: 'Radar in Valorant Cheats saved me near sites. Seeing the third party early in duos is huge. Boxes plus radar look clean.',
 		short: 'Radar in Valorant Cheats saved me near sites.',
-		slug: 'valorant-radar-hack-review-vanlifeeft',
+		slug: 'valorant-radar-hack-review-vanlifeval',
 		seoTitle: 'Radar Review by @vanLifeVAL — 5/5 | {brand}',
 		seoDescription: '@vanLifeVAL rates {brand} radar 5/5 near sites on Windows PC.',
 		date: '2026-07-28',
