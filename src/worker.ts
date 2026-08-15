@@ -6,8 +6,10 @@
  * Workers custom domain `www.valocheats.com` attached — otherwise
  * www is NXDOMAIN and Seobility fails the www/non-www check.
  */
+import { finalizeCrawlAssetResponse, isCrawlAssetPath } from '../functions/crawl-assets.js';
 import {
 	APEX_HOST,
+	CANONICAL_ORIGIN,
 	WWW_HOST,
 	resolveCanonicalPath,
 } from '../functions/path-redirects.js';
@@ -25,30 +27,20 @@ export default {
 		const host = (request.headers.get('host') || url.hostname).split(':')[0].toLowerCase();
 		const isProductionHost = host === APEX_HOST || host === WWW_HOST || LEGACY_HOSTS.has(host);
 		const pathRedirect = resolveCanonicalPath(url.pathname);
+		const needsHostRedirect = host === WWW_HOST || LEGACY_HOSTS.has(host);
+		const needsHttpsRedirect = isProductionHost && url.protocol === 'http:';
 
-		let changed = false;
-		const target = new URL(request.url);
-
-		if (host === WWW_HOST || LEGACY_HOSTS.has(host)) {
-			target.hostname = APEX_HOST;
-			target.port = '';
-			changed = true;
-		}
-
-		if (isProductionHost && target.protocol === 'http:') {
-			target.protocol = 'https:';
-			changed = true;
-		}
-
-		if (pathRedirect) {
-			target.pathname = pathRedirect;
-			changed = true;
-		}
-
-		if (changed) {
+		if (needsHostRedirect || needsHttpsRedirect || pathRedirect) {
+			const target = new URL((pathRedirect ?? url.pathname) + url.search, CANONICAL_ORIGIN);
 			return Response.redirect(target.toString(), 301);
 		}
 
-		return env.ASSETS.fetch(request);
+		const response = await env.ASSETS.fetch(request);
+
+		if (isCrawlAssetPath(url.pathname)) {
+			return finalizeCrawlAssetResponse(url.pathname, response);
+		}
+
+		return response;
 	},
 };
