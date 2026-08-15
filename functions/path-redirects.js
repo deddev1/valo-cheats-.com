@@ -29,7 +29,8 @@ const LOCALE_HACKS = {
 	sv: 'valorant-cheats',
 };
 
-// Keep in sync with public/_redirects (query strings are preserved by the caller).
+// Worker-side 301 map (query strings preserved by the caller).
+// Cannibal locale pairs live in cannibal-redirects.json (sync-cannibal-redirects.mjs).
 export const PATH_REDIRECTS = {
 	'/sitemap-0.xml': '/sitemap.xml',
 	'/sitemap-index.xml': '/sitemap.xml',
