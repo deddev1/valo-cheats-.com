@@ -94,7 +94,7 @@ export async function onRequest(context) {
 	let response = await context.next();
 
 	if (isCrawlAssetPath(url.pathname)) {
-		response = finalizeCrawlAssetResponse(url.pathname, response);
+		return finalizeCrawlAssetResponse(url.pathname, response);
 	}
 
 	const headers = new Headers(response.headers);

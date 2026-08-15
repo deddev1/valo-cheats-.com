@@ -21,6 +21,25 @@ export interface Env {
 /** Old apex still 301 → current canonical. */
 const LEGACY_HOSTS = new Set<string>();
 
+function getClientProtocol(request: Request): string {
+	const visitor = request.headers.get('cf-visitor');
+	if (visitor) {
+		try {
+			const scheme = JSON.parse(visitor).scheme;
+			if (scheme) return String(scheme).toLowerCase();
+		} catch {
+			// ignore malformed cf-visitor
+		}
+	}
+
+	const forwarded = request.headers.get('x-forwarded-proto');
+	if (forwarded) {
+		return forwarded.split(',')[0].trim().toLowerCase();
+	}
+
+	return new URL(request.url).protocol.replace(':', '').toLowerCase();
+}
+
 export default {
 	async fetch(request: Request, env: Env): Promise<Response> {
 		const url = new URL(request.url);
@@ -28,7 +47,7 @@ export default {
 		const isProductionHost = host === APEX_HOST || host === WWW_HOST || LEGACY_HOSTS.has(host);
 		const pathRedirect = resolveCanonicalPath(url.pathname);
 		const needsHostRedirect = host === WWW_HOST || LEGACY_HOSTS.has(host);
-		const needsHttpsRedirect = isProductionHost && url.protocol === 'http:';
+		const needsHttpsRedirect = isProductionHost && getClientProtocol(request) === 'http';
 
 		if (needsHostRedirect || needsHttpsRedirect || pathRedirect) {
 			const target = new URL((pathRedirect ?? url.pathname) + url.search, CANONICAL_ORIGIN);
