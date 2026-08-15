@@ -1,3 +1,4 @@
+import { finalizeCrawlAssetResponse, isCrawlAssetPath } from './crawl-assets.js';
 import { APEX_HOST, CANONICAL_ORIGIN, WWW_HOST, resolveCanonicalPath } from './path-redirects.js';
 
 /** Legacy domains → canonical apex (301). None for this launch. */
@@ -90,7 +91,12 @@ export async function onRequest(context) {
 		return new Response(null, { status: 301, headers });
 	}
 
-	const response = await context.next();
+	let response = await context.next();
+
+	if (isCrawlAssetPath(url.pathname)) {
+		response = finalizeCrawlAssetResponse(url.pathname, response);
+	}
+
 	const headers = new Headers(response.headers);
 	const contentType = headers.get('Content-Type') || '';
 	const isHtml = contentType.includes('text/html');
