@@ -47,25 +47,14 @@ function htmlPathFor(urlPath) {
 	return `${urlPath.replace(/^\//, '').replace(/\/$/, '')}/index.html`;
 }
 
-const REDIRECT_MAP = (() => {
-	const text = readFileSync(path.join(ROOT, 'public/_redirects'), 'utf8');
+async function loadRedirectMap() {
 	const map = new Map();
-	for (const line of text.split(/\r?\n/)) {
-		const t = line.trim();
-		if (!t || t.startsWith('#')) continue;
-		const parts = t.split(/\s+/);
-		if (parts.length < 3) continue;
-		const [from, to, status] = parts;
-		if (status === '301' || status === '302') map.set(from, to);
-	}
-	try {
-		const json = JSON.parse(readFileSync(path.join(ROOT, 'functions/cannibal-redirects.json'), 'utf8'));
-		for (const [from, to] of Object.entries(json)) map.set(from, to);
-	} catch {
-		/* optional */
-	}
+	const { PATH_REDIRECTS } = await import('../functions/path-redirects.js');
+	for (const [from, to] of Object.entries(PATH_REDIRECTS)) map.set(from, to);
+	const json = JSON.parse(readFileSync(path.join(ROOT, 'functions/cannibal-redirects.json'), 'utf8'));
+	for (const [from, to] of Object.entries(json)) map.set(from, to);
 	return map;
-})();
+}
 
 let errors = 0;
 const fail = (msg) => {
@@ -75,6 +64,7 @@ const fail = (msg) => {
 const ok = (msg) => console.log(`✓ ${msg}`);
 
 async function main() {
+	const REDIRECT_MAP = await loadRedirectMap();
 	const DIST = await resolveDist();
 	console.log(`Deep sitemap audit (${path.relative(ROOT, DIST)})\n`);
 
